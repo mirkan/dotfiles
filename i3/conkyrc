@@ -1,0 +1,42 @@
+﻿background no
+out_to_console yes
+out_to_x no
+update_interval 5
+music_player_interval 4
+total_run_times 0
+short_units yes
+pad_percents 3
+if_up_strictness link
+override_utf8_locale yes
+mpd_port 6600
+
+TEXT
+### MPD
+	,[${if_mpd_playing}
+		{"full_text": "♫","color": "\#4d8514"},
+  		{"full_text": "$mpd_smart"},$endif 
+### CPU
+		#{"full_text": "❤ $acpitemp°C [$cpu%]","color": "\#DC322F"},
+### WIFI
+ 		${if_up wlp3s0}
+			{"full_text": "≈","color":"\#33CC99"},
+			{"full_text": "${wireless_essid wlp3s0}[${wireless_link_qual_perc wlp3s0}%]"},
+			#{"full_text": "Down: ${totaldown wlp3s0}"},
+			#{"full_text": "Up: ${totalup wlp3s0}"},
+		$else$
+			{if_up enp0s20u1}
+				{"full_text": "$gw_ip"},
+		$else
+			{"full_text": "≈ ---","color":"\#33CC99"},$endif$endif
+### DISK
+		{"full_text": "⛁ H: ${fs_free /home}"},
+		{"full_text": "/ ${fs_free /}"},
+### POWER
+		{"full_text": "⚡ ${battery_percent BAT1}%"},
+### SOUND - Pulseaudio
+		{"full_text": "♪ ${exec pamixer --get-volume}%"},
+### SOUND - Alsa
+		#{"full_text": "♪ ${exec amixer -M get Master | egrep -o "[0-9]+%"}"},
+### TIME
+		{"full_text": "${time %a %d %b} ${time %H:%M}"}
+]

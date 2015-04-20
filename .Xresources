@@ -1,0 +1,58 @@
+! terminal colors ------------------------------------------------------------
+
+Rxvt*scrollBar:               false
+Rxvt*font:                    xft:Inconsolata:size=10
+Rxvt*depth:     	            33
+Rxvt*letterSpace:             -1
+! clickable URLs
+!Rxvt.perl-ext-common: 			default,clipboard,matcher
+Rxvt.perl-ext-common: 			default,clipboard
+Rxvt.iso14755: 					False
+Rxvt.url-launcher: 				/usr/bin/firefox
+Rxvt.matcher.button: 			1
+Rxvt.colorUL: 						#4682B4
+
+! Bind copy/paste keys
+!URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+!URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd:  xclip -i clipboard
+URxvt.clipboard.pastecmd: xclip -o clipboard
+! euphrasia fg/bg
+Rxvt*background: 					[85]#090C19
+!Rxvt*foreground:  				#E6E6E6
+Rxvt*foreground:  				#FFFFFF
+Rxvt*cursorColor:					#1AAA13
+! black
+*color0:  #222946
+! dark grey
+*color8:  #8C8B89
+! red
+*color1:  #B32323
+! bright red
+*color9:  #DC2C2C
+! green
+*color2:  #1AAA13
+! bright green
+*color10: #5DCE33
+! yellow
+*color3:  #FF9F3E
+! bright yellow
+color11: #E6CB29
+! blue
+*color4:  #4957F3
+! bright blue
+*color12: #4D79FF
+! magenta
+*color5:  #BF3E94
+! bright magenta
+*color13: #B641CC
+! cyan
+*color6:  #09A5B3
+! bright cyan
+*color14: #3CB6F3
+! light grey
+*color7:  #AEAEAE
+! white
+*color15: #DBDDE4
+
+! vim:ft=xdefaults
