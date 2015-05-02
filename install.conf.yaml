@@ -4,11 +4,14 @@
 - link: 
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
     ~/.i3: i3/
     ~/.config/interrobang: interrobang
+    ~/.ncmpcpp: ncmpcpp
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.Xresources: Xresources
-    ~/.vimperatorrc: vimperatorrc
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.xinitrc: xinitrc
 - shell: []

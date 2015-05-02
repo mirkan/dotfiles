@@ -1,0 +1,17 @@
+#Anything ending with a tilde
+*~
+
+#Vim temp files
+
+*.swp
+*.swo
+
+#Workbench backup files
+*.bak
+
+*.log*
+
+*.orig
+
+*.old
+

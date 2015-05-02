@@ -1,0 +1,93 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.5
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+
+### SOUND ###
+# pulse
+# Increase volume
+"pamixer --increase 5"
+  Mod4+F3
+# Decrease volume
+"pamixer --decrease 5"
+  Mod4+F2
+# Mute volume
+"pamixer --toggle-mute"
+  Mod4+F1
+
+#ALSA
+# Increase volume
+#"amixer set Master 5+"
+#  Mod4+F3
+# Decrease volume
+#"amixer -c 0 set Master 5-"
+#   Mod4+F2
+# Mute volume
+#"amixer -c 0 set Master toggle"
+#  Mod4+F1
+### PROGRAMS/SOFTWARE ###
+#MPD
+#Next mpd track
+"mpc -p 6600 next"
+  control+alt+Right
+#Previous mpd track
+"mpc -p 6600 prev"
+  control+alt+Left
+#Play/Pause mpd
+"mpc -p 6600 toggle"
+  control+alt+p
+
+# SCREENSHOT
+# Take screenshot at selected window or area and save to ~/.screenshots
+"~/.scripts/screenshot select"
+  control+Print
+# Take full screenshot of display and save to ~/.screenshots
+"~/.scripts/screenshot"
+  Print
+	
+
+### MISC ###
+#F12 for X-selection
+#"xvkbd -no-jump-pointer -xsendevent -text "`xsel`" 2>/dev/null"
+#    F12
+"xbindkeys_show" 
+  control+shift + q
+##################################
+# End of xbindkeys configuration #
+##################################
