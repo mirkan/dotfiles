@@ -1,0 +1,14 @@
+- clean: ['~','~/.config']
+- shell:
+    - mkdir -p ~/.config 
+- link: 
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.i3: i3/
+    ~/.config/interrobang: interrobang
+    ~/.bashrc: basrc
+    ~/.bash_aliases: bash_aliases
+    ~/.Xresources: Xresources
+    ~/.vimperatorrc: vimperatorrc
+- shell: []

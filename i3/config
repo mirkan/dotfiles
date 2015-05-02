@@ -10,7 +10,6 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 
@@ -21,13 +20,21 @@ set $mod Mod4
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 8 
 font pango: URW Gothic L Book 8
-#font pango
-#font pango: Icons 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 focus_follows_mouse no
 
+#Workspaces
+workspace "1main" output LVDS1
+workspace "2www" output LVDS1
+workspace "3work" output LVDS1
+workspace "4virt" output LVDS1
+workspace "5media" output LVDS1
+workspace "6spel" output LVDS1
+workspace "7misc" output LVDS1
+
+# KEY BINDINGS
 # start a terminal
 bindsym $mod+Return exec urxvtc
 
@@ -44,8 +51,12 @@ bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 bindsym $mod+d exec --no-startup-id interrobang
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
+#bindsym $mod+h focus left; exec --no-startup-id ~/mouseonfocus.sh
+#bindsym $mod+j focus down; exec --no-startup-id ~/mouseonfocus.sh
+#bindsym $mod+k focus up; exec --no-startup-id ~/mouseonfocus.sh
+#bindsym $mod+l focus right; exec --no-startup-id ~/mouseonfocus.sh
+bindsym $mod+h focus left 
+bindsym $mod+j focus down 
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
@@ -91,81 +102,31 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
-
-#Workspaces
-workspace "1Main" output LVDS1
-workspace "2www" output LVDS1
-workspace "3Work" output LVDS1
-workspace "4virt" output LVDS1
-workspace "5Media" output LVDS1
-workspace "6Spel" output LVDS1
-workspace "7Misc" output LVDS1
+bindsym $mod+z focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1Main
+bindsym $mod+1 workspace 1main
 bindsym $mod+2 workspace 2www
-bindsym $mod+3 workspace 3Work
+bindsym $mod+3 workspace 3work
 bindsym $mod+4 workspace 4virt
-bindsym $mod+5 workspace 5Media
-bindsym $mod+6 workspace 6Spel
-bindsym $mod+7 workspace 7Misc
+bindsym $mod+5 workspace 5media
+bindsym $mod+6 workspace 6spel
+bindsym $mod+7 workspace 7misc
 bindsym $mod+8 workspace 8
-#bindsym $mod+9 workspace 9
-#bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1Main
+bindsym $mod+Shift+1 move container to workspace 1main
 bindsym $mod+Shift+2 move container to workspace 2www
-bindsym $mod+Shift+3 move container to workspace 3Work
+bindsym $mod+Shift+3 move container to workspace 3work
 bindsym $mod+Shift+4 move container to workspace 4virt
-bindsym $mod+Shift+5 move container to workspace 5Media
-bindsym $mod+Shift+6 move container to workspace 6Spel
-bindsym $mod+Shift+8 move container to workspace 7Misc
-#bindsym $mod+Shift+8 move container to workspace 8
-#bindsym $mod+Shift+9 move container to workspace 9
-#bindsym $mod+Shift+0 move container to workspace 10
-
-#2.www
-# chrome to workspace 2:www
-assign [class="Chromium"] 2www
-#assign Opera to www
-assign [class="Opera"] 2www
-#firefox -> 2:www
-assign [class="Firefox"] 2www
-#dwb -> 2:www
-assign [class="Dwb"] 2www
-
-#3.MUSIK
-# Clementine to workspace 3:Music
-assign [class="Clementine"] 5Media
-assign [class="Spotify"] 5Media
-
-#3.WORK 
-# Libreoffice
-assign [class="libreoffice"] 3Work
-
-#4.Virt
-assign [class="VirtualBox"] 4virt
-
-#5.SPEL
-#GW to Spel
-assign [class="Wine" instance="Gw.exe"] 6Spel
-#Steam till spel
-assign [class="Steam"] 6Spel
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Wine" instance="Gw.exe"] floating enable
+bindsym $mod+Shift+5 move container to workspace 5media
+bindsym $mod+Shift+6 move container to workspace 6spel
+bindsym $mod+Shift+7 move container to workspace 7misc
+bindsym $mod+Shift+8 move container to workspace 8
 
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
-
-hide_edge_borders both
-
-#Hide title for dwb
-for_window [class="Dwb"] border none
-for_window [class="URxvt"] border none
-for_window [class="Firefox"] border none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -175,6 +136,39 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# ASSIGN APPLICATIONS TO WORKSPACE:
+# 2.www
+assign [class="Chromium"] 2www
+assign [class="Opera"] 2www
+assign [class="Firefox"] 2www
+assign [class="Dwb"] 2www
+
+#3.MUSIK
+assign [class="Clementine"] 5media
+assign [class="Spotify"] 5media
+
+#3.WORK 
+assign [class="libreoffice"] 3work
+
+#4.Virt
+assign [class="VirtualBox"] 4virt
+
+#5.SPEL
+assign [class="Wine" instance="Gw.exe"] 6spel
+assign [class="Steam"] 6spel
+assign [class="Skype"] 6spel
+
+# PREVENT TILING WINDOWS, FLOAT:
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Wine" instance="Gw.exe"] floating enable
+
+hide_edge_borders none
+
+# Hide title for applications:
+for_window [class="Dwb"] border none
+for_window [class="URxvt"] border 1pixel
+for_window [class="Firefox"] border none
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -200,44 +194,39 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command			   ~/.config/i3/conky
-    position						top
-    strip_workspace_numbers	yes
+				status_command			   ~/.config/i3/conky
+				position						top
+				strip_workspace_numbers	yes
 
-    colors {
-    	separator #222222
-   	background #222222
-    	statusline #ffffff
-    	focused_workspace #4d8514 #4d85140 #ffffff
-    	active_workspace #333333 #333333 #888888
-    	inactive_workspace #333333 #333333 #888888
-    	urgent_workspace #c84d17 #c84d17 #ffffff
-  	}
+				colors {
+							 separator #222222
+							 background #222222
+							 statusline #ffffff
+							 focused_workspace #4d8514 #4d85140 #ffffff
+							 active_workspace #333333 #333333 #888888
+							 inactive_workspace #333333 #333333 #888888
+							 urgent_workspace #c84d17 #c84d17 #ffffff
+			  }
 }
 
-#Starting apps
-#Randomize background
-exec --no-startup-id ~/.scripts/wallpaper_rotate &
-
-# Compton
-exec --no-startup-id compton --config ~/.config/compton.conf -b
-
-#Start udevil(devon)
-exec --no-startup-id devmon &
-
-#Thunar
-#exec --no-startup-id thunar --daemon
-#Urxvt daemon
-exec --no-startup-id urxvtd -q -f -o
-#MPD
-#exec --no-startup-id mpd &
-
-#assign to workspace
-#exec --no-startup-id i3-msg 'workspace 3Work; exec urxvt -e ncmpcpp; workspace 1Main'
-exec --no-startup-id i3-msg 'workspace 2www; exec firefox; workspace 1Main'
-exec --no-startup-id i3-msg 'workspace 1Main; exec urxvtc; workspace 1Main'
-
-client.focused #4d8514 #4d8514 #ffffff #c84d17
+# Border colors
+client.focused #32580b #32580b #ffffff #32580b
 client.focused_inactive #333333 #333333 #888888 #333333
 client.unfocused #333333 #333333 #888888 #333333
 client.urgent #c84d17 #c84d17 #ffffff #c84d17
+
+### AUTOSTART ###
+# Rotate background
+exec --no-startup-id ~/.scripts/wallpaper_rotate &
+# Compton
+#exec --no-startup-id compton --config ~/.config/compton.conf -b
+# Start udevil(devon)
+exec --no-startup-id devmon &
+# Urxvt 
+exec --no-startup-id urxvtd -q -f -o
+
+#assign to workspace
+exec --no-startup-id i3-msg 'workspace 1main; exec urxvtc; workspace 1main'
+exec --no-startup-id i3-msg 'workspace 2www; exec firefox --no-startup-id; workspace 1main'
+#exec --no-startup-id i3-msg 'workspace 3work; exec urxvt -e ncmpcpp; workspace 1main'
+
