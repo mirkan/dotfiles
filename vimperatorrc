@@ -1,1 +1,4 @@
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
+" Map tab switch to J and K
+noremap K <C-n>
+noremap J <C-p>
