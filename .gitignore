@@ -5,7 +5,7 @@
 
 *.swp
 *.swo
-
+vim/bundle/
 #Workbench backup files
 *.bak
 

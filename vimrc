@@ -3,7 +3,7 @@ syntax on
 colorscheme ir_black
 
 set number
-set tabstop=3
+set tabstop=4
 
 " Disable arrow keys
 no <down> <Nop>
@@ -39,6 +39,7 @@ set dictionary+=/usr/share/dict/words
 set listchars=tab:▸\ ,eol:¬
 " Pathogen
 execute pathogen#infect()
+" Toggle NERDtree
 nmap <C-n> :NERDTreeToggle<CR>
 " Hightlighting  colors
 " Invisible char colors
