@@ -3,17 +3,19 @@
     - mkdir -p ~/.config 
 - link: 
     ~/.vim: vim/
-    ~/.vimrc: vimrc
+    ~/.vimrc:
+        force: true
+        path: vimrc
     ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
     ~/.i3: i3/
     ~/.config/interrobang: interrobang
     ~/.ncmpcpp: ncmpcpp
-    ~/.bashrc: bashrc
+    ~/.bashrc: 
+        force: true
+        path: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
-- shell: 
-  - git submodule update --init --recursive
 
