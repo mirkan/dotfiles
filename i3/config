@@ -35,6 +35,8 @@ workspace "6spel" output LVDS1
 workspace "7misc" output LVDS1
 
 # KEY BINDINGS
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show 
 # start a terminal
 bindsym $mod+Return exec urxvtc
 
@@ -194,7 +196,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-				status_command			   ~/.config/i3/conky
+				status_command			   ~/.i3/conky
 				position						top
 				strip_workspace_numbers	yes
 
