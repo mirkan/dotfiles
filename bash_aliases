@@ -96,6 +96,6 @@ cl() {
 }
 
 alias wakebrix="wol 74:d4:35:69:d2:fe"
-alias i3conf="vim /home/robin/.config/i3/config"
+alias i3conf="vim /home/robin/.i3/config"
 alias python='/usr/bin/python2'
 
