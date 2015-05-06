@@ -9,4 +9,3 @@ noremap J <C-p>
 nnoremap j 10j
 nnoremap k 10k
 
-
