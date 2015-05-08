@@ -15,5 +15,7 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 #start xbindkeys - custom keyboard shortcuts
 xbindkeys
+# Start xflux
+xflux -l 55.584526 -g 13.054724
 
 exec $1
