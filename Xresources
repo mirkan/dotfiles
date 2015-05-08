@@ -1,9 +1,10 @@
 ! terminal colors ------------------------------------------------------------
 
 Rxvt*scrollBar:               false
-Rxvt*font:                    xft:Inconsolata:size=10
+Rxvt*font:                    xft:Inconsolata:size=11
 Rxvt*depth:     	            33
 Rxvt*letterSpace:             -1
+
 ! clickable URLs
 !Rxvt.perl-ext-common: 			default,clipboard,matcher
 Rxvt.perl-ext-common: 			default,clipboard
@@ -55,7 +56,7 @@ URxvt.clipboard.pastecmd: xclip -o clipboard
 ! Set colors
 *background:              S_base03
 *foreground:              S_base0
-*fading:                  40
+*fading:                  50
 *fadeColor:               S_base03
 *cursorColor:             S_base1
 *pointerColorBackground:  S_base01
