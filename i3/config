@@ -165,11 +165,11 @@ assign [class="Skype"] 6spel
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Wine" instance="Gw.exe"] floating enable
 
-hide_edge_borders none
+hide_edge_borders both
 
 # Hide title for applications:
 for_window [class="Dwb"] border none
-for_window [class="URxvt"] border 1pixel
+for_window [class="URxvt"] border none
 for_window [class="Firefox"] border none
 
 # resize window (you can also use the mouse for that)
@@ -232,3 +232,4 @@ exec --no-startup-id i3-msg 'workspace 1main; exec urxvtc; workspace 1main'
 exec --no-startup-id i3-msg 'workspace 2www; exec firefox --no-startup-id; workspace 1main'
 #exec --no-startup-id i3-msg 'workspace 3work; exec urxvt -e ncmpcpp; workspace 1main'
 
+xflux -l 55.584526 -g 13.054724
