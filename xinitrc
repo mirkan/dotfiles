@@ -18,4 +18,6 @@ xbindkeys
 # Start xflux
 xflux -l 55.584526 -g 13.054724
 
+# Unclutter after 3 seconds
+unclutter -idle 3
 exec $1
