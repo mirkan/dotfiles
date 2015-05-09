@@ -232,4 +232,3 @@ exec --no-startup-id i3-msg 'workspace 1main; exec urxvtc; workspace 1main'
 exec --no-startup-id i3-msg 'workspace 2www; exec firefox --no-startup-id; workspace 1main'
 #exec --no-startup-id i3-msg 'workspace 3work; exec urxvt -e ncmpcpp; workspace 1main'
 
-xflux -l 55.584526 -g 13.054724
