@@ -18,6 +18,10 @@ xbindkeys
 # Start xflux
 xflux -l 55.584526 -g 13.054724
 
+# Avoid touchpad tapping while tapping
+syndaemon -t -k -i 2 -d
+
 # Unclutter after 3 seconds
-unclutter -idle 3
+unclutter -idle 3 &
+
 exec $1
