@@ -18,4 +18,5 @@
     ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
-
+- shell:
+    - git update-submodules # after linking ~/.gitconfig
