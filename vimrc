@@ -1,5 +1,6 @@
 " Syntax highlightning
 syntax on
+set number
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
 
@@ -7,7 +8,6 @@ autocmd! bufwritepost .vimrc source %
 set background=dark
 colorscheme solarized
 
-set number
 set tabstop=4
 
 " Disable arrow keys
@@ -31,6 +31,7 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 " Auto indent
+" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
 filetype indent plugin on
 
 " Map F2 to save and close
@@ -42,7 +43,8 @@ autocmd BufRead ?. silent loadview
 
 set dictionary+=/usr/share/dict/words
 
-set listchars=tab:▸\ ,eol:¬
+" Set chars for tabs and newlines
+set listchars=tab:▸\ ,eol:¬,trail:%
 "
 " Pathogen
 execute pathogen#infect()
