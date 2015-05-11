@@ -19,4 +19,4 @@
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
 - shell:
-    - git update-submodules # after linking ~/.gitconfig
+        - git submodule update --init --recursive
