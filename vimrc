@@ -1,5 +1,7 @@
-" Syntax highlightning 
+" Syntax highlightning
 syntax on
+" Reload vimrc after save
+autocmd! bufwritepost .vimrc source %
 
 " Colorscheme
 set background=dark
@@ -36,7 +38,7 @@ map <F2> :wq!<CR>
 
 " Save folds automatically
 autocmd BufWrite ?. mkview
-autocmd BufRead ?. silent loadview 
+autocmd BufRead ?. silent loadview
 
 set dictionary+=/usr/share/dict/words
 
@@ -73,3 +75,5 @@ let g:vdebug_options= {
     \    "marker_closed_tree" : '▸',
     \    "marker_open_tree" : '▾'
     \}
+" Trim trailing whitespace
+autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
