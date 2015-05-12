@@ -7,7 +7,7 @@ Rxvt*letterSpace:             -1
 
 ! clickable URLs
 !Rxvt.perl-ext-common: 			default,clipboard,matcher
-Rxvt.perl-ext-common: 			default,clipboard
+!Rxvt.perl-ext-common: 			default,clipboard
 Rxvt.iso14755: 					False
 Rxvt.url-launcher: 				/usr/bin/firefox
 Rxvt.matcher.button: 			1

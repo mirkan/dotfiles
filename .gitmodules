@@ -24,6 +24,8 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+	ignore = untracked
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
+	ignore = untracked
