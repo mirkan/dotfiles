@@ -18,5 +18,6 @@
     ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
+    ~/.fonts: fonts/
 - shell:
-        - git submodule update --init --recursive
+        #        - git submodule update --init --recursive
