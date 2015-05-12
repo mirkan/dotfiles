@@ -1,23 +1,18 @@
 ! terminal colors ------------------------------------------------------------
 
 Rxvt*scrollBar:               false
-Rxvt*font:                    xft:Inconsolata:size=11
-Rxvt*depth:     	            33
+!Rxvt*font:                    xft:Inconsolata:size=11
+Rxvt*font: 						xft:Inconsolata\ for\ Powerline:size=13
+!Rxvt*depth:     	            33
 Rxvt*letterSpace:             -1
 
 ! clickable URLs
 !Rxvt.perl-ext-common: 			default,clipboard,matcher
 !Rxvt.perl-ext-common: 			default,clipboard
-Rxvt.iso14755: 					False
+!Rxvt.iso14755: 					False
 Rxvt.url-launcher: 				/usr/bin/firefox
 Rxvt.matcher.button: 			1
 Rxvt.colorUL: 						#4682B4
-
-! Bind copy/paste keys
-!URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-!URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.clipboard.copycmd:  xclip -i clipboard
-URxvt.clipboard.pastecmd: xclip -o clipboard
 
 ! COLORSCHEME
 ! Solarized

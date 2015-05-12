@@ -1,6 +1,13 @@
+" Pathogen
+"source ~/.dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
+execute pathogen#infect()
+
 " Syntax highlightning
 syntax on
 set number
+
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
 
@@ -45,9 +52,6 @@ set dictionary+=/usr/share/dict/words
 
 " Set chars for tabs and newlines
 set listchars=tab:▸\ ,eol:¬,trail:%
-"
-" Pathogen
-execute pathogen#infect()
 
 " Toggle NERDtree
 nmap <C-n> :NERDTreeToggle<CR>
@@ -79,3 +83,24 @@ let g:vdebug_options= {
     \}
 " Trim trailing whitespace
 autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
+
+" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = {
+        \ "!level":  "errors",
+		\ "type":	 "style"}
