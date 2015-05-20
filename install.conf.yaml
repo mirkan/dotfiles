@@ -11,7 +11,7 @@
     ~/.i3: i3/
     ~/.config/interrobang: interrobang
     ~/.config/ranger: ranger/
-    ~/.ncmpcpp: ncmpcpp/
+    ~/.ncmpcpp: ncmpcpp
     ~/.bashrc: 
         force: true
         path: bashrc
