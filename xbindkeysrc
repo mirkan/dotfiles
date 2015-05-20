@@ -86,8 +86,8 @@
 #F12 for X-selection
 #"xvkbd -no-jump-pointer -xsendevent -text "`xsel`" 2>/dev/null"
 #    F12
-"xbindkeys_show" 
-  control+shift + q
+#"xbindkeys_show" 
+#  control+shift + q
 ##################################
 # End of xbindkeys configuration #
 ##################################
