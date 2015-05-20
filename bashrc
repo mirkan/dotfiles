@@ -14,7 +14,7 @@ export SYSTEMD_EDITOR=vim
 export VISUAL=vim
 export HISTFILESIZE=
 export HISTSIZE=
-export PAGER='vimpager'
+#export PAGER='vimpager'
 
 # Prompt style
 PS1='\[\e[0;31m\]\u\[\e[m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0m\] '
