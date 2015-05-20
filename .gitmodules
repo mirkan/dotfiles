@@ -28,7 +28,7 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
-	ignore = untracked
+	ignore = dirty
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
