@@ -10,5 +10,3 @@
 *.orig
 *.old
 
-ranger/colorschemes/__pycache__/
-ranger/bookmarks/
