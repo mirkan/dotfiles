@@ -1,3 +1,5 @@
 [user]
 	email = robin@bjornsvik.se
 	name = mirkan
+[push]
+	default = matching
