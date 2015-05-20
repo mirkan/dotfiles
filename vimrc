@@ -7,7 +7,7 @@ execute pathogen#infect()
 " Syntax highlightning
 syntax on
 set number
-
+set nowrap
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
 
