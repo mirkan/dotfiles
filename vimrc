@@ -1,8 +1,7 @@
 " Pathogen
-"source ~/.dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
-execute pathogen#infect()
+"execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
 
 " Syntax highlightning
 syntax on
