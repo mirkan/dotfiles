@@ -1,16 +1,13 @@
 #Anything ending with a tilde
 *~
-
 #Vim temp files
 
 *.swp
 *.swo
-#vim/bundle/
 #Workbench backup files
 *.bak
-
 *.log*
-
 *.orig
-
 *.old
+
+ranger/colorschemes/__pycache__/
