@@ -1,0 +1,6 @@
+delete
+open_with 
+!git status
+shell git status
+
+tc_colorscheme
