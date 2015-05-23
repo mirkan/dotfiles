@@ -2,23 +2,23 @@
 - shell:
     - mkdir -p ~/.config 
 - link: 
+    ~/.bashrc: 
+        force: true
+        path: bashrc
+    ~/.bash_aliases: bash_aliases
+    ~/.Xresources: Xresources
     ~/.vim: vim/
     ~/.vimrc:
         force: true
         path: vimrc
     ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
-    ~/.i3: i3/
-    ~/.config/interrobang: interrobang
+    ~/.local/share/fonts: fonts/
     ~/.config/ranger: ranger/
-    ~/.ncmpcpp: ncmpcpp
-    ~/.bashrc: 
-        force: true
-        path: bashrc
-    ~/.bash_aliases: bash_aliases
-    ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc: xinitrc
-    ~/.local/share/fonts: fonts/
+    ~/.config/interrobang: interrobang
+    #~/.ncmpcpp: ncmpcpp
+    #~/.i3: i3/
 - shell:
     - git submodule update --init --recursive

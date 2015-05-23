@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Paths
-PATH=$PATH:"/home/robin/.todo/:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/:/home/robin/.bin/"
+PATH=$PATH:"/home/robin/.todo/:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/:$HOME/.bin/"
 
 # Exports
 export EDITOR=vim
@@ -18,20 +18,6 @@ export HISTSIZE=
 
 # Prompt style
 PS1='\[\e[0;31m\]\u\[\e[m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0m\] '
-
-#ToDo.txt
-alias t='todo.sh -ftd /home/robin/.todo/todo.cfg'
-source ~/.todo/todo_completion
-#autocomplete for alias 't'
-complete -F _todo t
-#Default action 't' lists uncompleted tasks
-export TODOTXT_DEFAULT_ACTION=ls
-
-# DISPLAY
-#command screenfetch -c 34,255
-command todo.sh list @todo | head -n -2
-command echo "----------------------"
-command fortune -s
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
