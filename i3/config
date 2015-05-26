@@ -37,14 +37,19 @@ workspace "7misc" output LVDS1
 # KEY BINDINGS
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show 
-# start a terminal
-bindsym $mod+Return exec urxvtc
 
-# kill focused window
+# Open a terminal
+bindsym $mod+Return exec urxvtc
+# Open terminal w/ ranger
+bindsym $mod+Shift+Return exec urxvtc -e bash -c "ranger"
+
+# Kill focused window
 bindsym $mod+Shift+q kill
+
+# Lock screen
 bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 
-# start dmenu (a program launcher)
+# start dmenu/interrobang (a program launcher)
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -53,20 +58,16 @@ bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 bindsym $mod+d exec --no-startup-id interrobang
 
 # change focus
-#bindsym $mod+h focus left; exec --no-startup-id ~/mouseonfocus.sh
-#bindsym $mod+j focus down; exec --no-startup-id ~/mouseonfocus.sh
-#bindsym $mod+k focus up; exec --no-startup-id ~/mouseonfocus.sh
-#bindsym $mod+l focus right; exec --no-startup-id ~/mouseonfocus.sh
 bindsym $mod+h focus left 
 bindsym $mod+j focus down 
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -75,10 +76,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -196,19 +197,19 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-				status_command			   ~/.i3/conky
-				position						top
-				strip_workspace_numbers	yes
+	status_command	   ~/.i3/conky
+		position				top
+		strip_workspace_numbers	yes
 
-				colors {
-							 separator #222222
-							 background #222222
-							 statusline #ffffff
-							 focused_workspace #4d8514 #4d85140 #ffffff
-							 active_workspace #333333 #333333 #888888
-							 inactive_workspace #333333 #333333 #888888
-							 urgent_workspace #c84d17 #c84d17 #ffffff
-			  }
+		colors {
+			separator #222222
+			background #222222
+			statusline #ffffff
+			focused_workspace #4d8514 #4d85140 #ffffff
+			active_workspace #333333 #333333 #888888
+			inactive_workspace #333333 #333333 #888888
+			urgent_workspace #c84d17 #c84d17 #ffffff
+		}
 }
 
 # Border colors
@@ -221,7 +222,7 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 # Rotate background
 exec --no-startup-id ~/.scripts/wallpaper_rotate &
 # Compton
-#exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Start udevil(devon)
 exec --no-startup-id devmon &
 # Urxvt 
