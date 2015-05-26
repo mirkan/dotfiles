@@ -1,5 +1,13 @@
 # .bash_aliases
 #
+# Git
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gd='git diff'
+alias gco='git checkout'
+alias gpush='git push'
+alias gpull='git pull'
 
 ## Modified commands ## {{{
 alias ls='ls --color=auto'
