@@ -2,4 +2,7 @@
 	email = robin@bjornsvik.se
 	name = mirkan
 [push]
-	default = matching
+	default = simple
+[alias]
+	co = checkout
+	br = branch
