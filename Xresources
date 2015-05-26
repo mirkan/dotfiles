@@ -1,15 +1,14 @@
-! terminal colors ------------------------------------------------------------
+! terminal colors -----
 
-Rxvt*scrollBar:	               false
-!Rxvt*font:                    xft:Inconsolata:size=11
-Rxvt*font: 						xft:Inconsolata\ for\ Powerline:size=13
-!Rxvt*depth:     	            33
-Rxvt*letterSpace:             -1
-Rxvt*intensityStyles:			false
+Rxvt*scrollBar:	            false
+Rxvt*font: 					xft:Inconsolata\ for\ Powerline:size=13
+Rxvt*depth:     	        30
+Rxvt*letterSpace:  	        -1
+Rxvt*intensityStyles:		false
+Rxvt.url-launcher: 			/usr/bin/firefox
+Rxvt.matcher.button: 		1
+Rxvt.colorUL: 				#4682B4
 
-Rxvt.url-launcher: 				/usr/bin/firefox
-Rxvt.matcher.button: 			1
-Rxvt.colorUL: 						#4682B4
 ! Remove ISO-mode
 Rxvt.iso14755: false
 Rxvt.iso14755_52: false
