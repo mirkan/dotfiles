@@ -7,15 +7,45 @@ call pathogen#helptags()
 syntax on
 set number
 set nowrap
-" Reload vimrc after save
-autocmd! bufwritepost .vimrc source %
-
-" Colorscheme
+set tabstop=4
+set splitright
 set background=dark
 colorscheme solarized
 
-set tabstop=4
+" Hightlighting colors
+highlight SpecialKey guifg=#545454
+highlight NonText guifg=#545454
 
+" Activate mouse
+se mouse+=a
+
+" Reload vimrc after save
+autocmd! bufwritepost .vimrc source %
+
+" Save folds automatically
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+
+" Trim trailing whitespace
+autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
+
+" Auto indent
+" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
+filetype indent plugin on
+
+" Activate dictionary
+set dictionary+=/usr/share/dict/words
+
+" Set chars for tabs and newlines
+set listchars=tab:▸\ ,eol:¬,trail:%
+
+" KEY BINDINGS
+" Add newline w/o insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+" Search and Replace. Second line with confirmation.
+noremap ;; :%s:::g<Left><Left><Left>
+noremap ;' :%s:::cg<Left><Left><Left><Left>
 " Disable arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -31,37 +61,12 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
-
-" Add newline w/o insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
-" Auto indent
-" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
-filetype indent plugin on
-
 " Map F2 to save and close
 map <F2> :wq!<CR>
 
-" Save folds automatically
-autocmd BufWrite ?. mkview
-autocmd BufRead ?. silent loadview
-
-set dictionary+=/usr/share/dict/words
-
-" Set chars for tabs and newlines
-set listchars=tab:▸\ ,eol:¬,trail:%
-
+" PLUGINS
 " Toggle NERDtree
 nmap <C-n> :NERDTreeToggle<CR>
-
-" Hightlighting  colors
-" Invisible char colors
-highlight SpecialKey guifg=#545454
-highlight NonText guifg=#545454
-"
-" Mouse won't select row numbers
-se mouse+=a
 
 " Xdebug
 let g:vdebug_options= {
@@ -80,8 +85,6 @@ let g:vdebug_options= {
     \    "marker_closed_tree" : '▸',
     \    "marker_open_tree" : '▾'
     \}
-" Trim trailing whitespace
-autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
 
 " Airline
 set laststatus=2
@@ -100,6 +103,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_quiet_messages = {
-        \ "!level":  "errors",
-		\ "type":	 "style"}
+let g:syntastic_quiet_messages = { "type": "style" }
