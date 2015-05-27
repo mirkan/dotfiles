@@ -220,16 +220,15 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 
 ### AUTOSTART ###
 # Rotate background
-exec --no-startup-id ~/.scripts/wallpaper_rotate &
+#exec --no-startup-id ~/.scripts/wallpaper_rotate &
 # Compton
-exec --no-startup-id compton --config ~/.config/compton.conf -b
+#exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Start udevil(devon)
-exec --no-startup-id devmon &
+#exec --no-startup-id devmon &
 # Urxvt 
-exec --no-startup-id urxvtd -q -f -o
+#exec --no-startup-id urxvtd -q -f -o
 
-#assign to workspace
+# Assign to workspace
 exec --no-startup-id i3-msg 'workspace 1main; exec urxvtc; workspace 1main'
 exec --no-startup-id i3-msg 'workspace 2www; exec firefox --no-startup-id; workspace 1main'
-#exec --no-startup-id i3-msg 'workspace 3work; exec urxvt -e ncmpcpp; workspace 1main'
 
