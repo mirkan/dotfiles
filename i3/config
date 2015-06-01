@@ -19,7 +19,8 @@ set $mod Mod4
 # chose a FreeType font, such as:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 8 
-font pango: URW Gothic L Book 8
+font pango: URW Gothic L Book 8, FontAwesome 8
+#font pango: Terminus, FontAwesome 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -41,7 +42,7 @@ bindsym $mod+minus scratchpad show
 # Open a terminal
 bindsym $mod+Return exec urxvtc
 # Open terminal w/ ranger
-bindsym $mod+Shift+Return exec urxvtc -e bash -c "ranger"
+bindsym $mod+BackSpace exec urxvtc -e bash -c "ranger"
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -64,10 +65,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -76,10 +77,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -138,8 +139,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "$HOME/.bin/i3_powermenu.sh"
 # ASSIGN APPLICATIONS TO WORKSPACE:
 # 2.www
 assign [class="Chromium"] 2www
@@ -202,7 +203,7 @@ bar {
 		strip_workspace_numbers	yes
 
 		colors {
-			separator #222222
+			separator #404040
 			background #222222
 			statusline #ffffff
 			focused_workspace #4d8514 #4d85140 #ffffff
