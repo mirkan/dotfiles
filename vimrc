@@ -27,7 +27,8 @@ au BufWinLeave * mkview
 au BufWinEnter * silent loadview
 
 " Trim trailing whitespace
-autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
+" autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Auto indent
 " http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
