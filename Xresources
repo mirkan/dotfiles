@@ -2,7 +2,7 @@
 
 Rxvt*scrollBar:	            false
 Rxvt*font: 					xft:Inconsolata\ for\ Powerline:size=13
-Rxvt*depth:     	        30
+!Rxvt*depth:     	        30
 Rxvt*letterSpace:  	        -1
 Rxvt*intensityStyles:		false
 Rxvt.url-launcher: 			/usr/bin/firefox
@@ -28,7 +28,7 @@ Rxvt.iso14755_52: false
 ! Dark
 
 #define S_base03        #001A21
-! #define S_base03        #002b36
+!#define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83
@@ -51,7 +51,7 @@ Rxvt.iso14755_52: false
 ! Set colors
 *background:              S_base03
 *foreground:              S_base0
-*fading:                  50
+*fading:                  40
 *fadeColor:               S_base03
 *cursorColor:             S_base1
 *pointerColorBackground:  S_base01
