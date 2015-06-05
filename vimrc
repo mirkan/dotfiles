@@ -8,6 +8,7 @@ syntax on
 set number
 set nowrap
 set tabstop=4
+set shiftwidth=4
 set splitright
 set background=dark
 colorscheme solarized
@@ -44,9 +45,11 @@ set listchars=tab:▸\ ,eol:¬,trail:%
 " Add newline w/o insert mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
 " Search and Replace. Second line with confirmation.
 noremap ;; :%s:::g<Left><Left><Left>
 noremap ;' :%s:::cg<Left><Left><Left><Left>
+
 " Disable arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -62,12 +65,16 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
+
 " Map F2 to save and close
 map <F2> :wq!<CR>
 
 " PLUGINS
 " Toggle NERDtree
 nmap <C-n> :NERDTreeToggle<CR>
+
+" Save as root
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " Xdebug
 let g:vdebug_options= {
@@ -95,6 +102,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

@@ -2,15 +2,6 @@
 # Aliases and exports
 
 ## Aliases
-# Git
-#alias ga='git add'
-#alias gc='git commit'
-#alias gs='git status'
-#alias gd='git diff'
-#alias gco='git checkout'
-#alias gpush='git push'
-#alias gpull='git pull'
-
 ## Modified commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -117,5 +108,4 @@ if [[ -f $HOME/.bash-git-prompt/gitprompt.sh && ! $ZSH ]]; then
 	GIT_PROMPT_THEME=Solarized
 	source $HOME/.bash-git-prompt/gitprompt.sh
 fi
-
 #vim: set syntax=sh
