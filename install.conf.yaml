@@ -29,8 +29,8 @@
     ~/.xinitrc:
         force: true
         path: xinitrc
-    ~/.local/share/fonts: fonts/
-        path: fonts
+    ~/.local/share/fonts:
+        path: fonts/
         create: yes
 - shell:
     - git submodule update --init --recursive
