@@ -2,14 +2,18 @@
 # ~/.xinitrc
 # Executed by startx (run your window manager from here)
 
+E_i3=$HOME/.i3log-$(date +'%F-%k-%M-%S')
+
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
   done
   unset f
 fi
+
 # Merge Xresources
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # start a program automatically if
 # 1) it is installed on the system
@@ -26,6 +30,8 @@ startprog() {
   [[ "x$3" != "x" ]] && [ ! -e "$3" ] && return
   eval "$1" &
 }
+
+## STARTUPS
 # Compton
 startprog "compton --config ~/.config/compton.conf -b" compton
 
@@ -56,4 +62,4 @@ startprog "syndaemon -t -k -i 1 -d" syndaemon
 # Unclutter after 3 seconds
 startprog "unclutter -idle 3" syndaemon
 
-exec $1
+exec i3 -V &>> "$E_i3"
