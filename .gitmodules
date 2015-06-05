@@ -42,3 +42,7 @@
 	path = vim/bundle/vim-youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe
 	ignore = dirty
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+	ignore = dirty
