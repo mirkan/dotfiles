@@ -38,7 +38,6 @@
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 	ignore = dirty
-[submodule "vim/bundle/YouCompleteMe"]
-	path = vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = dirty
+[submodule "vim/bundle/vim-youcompleteme"]
+	path = vim/bundle/vim-youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe
