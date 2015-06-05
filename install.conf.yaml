@@ -1,6 +1,6 @@
 - clean: ['~/', '~/.config']
 - shell:
-    - mkdir -p ~/.config
+    - mkdir -p ~/.config ~/.local/share
 - link:
     ~/.vim: vim/
     ~/.vimrc:
@@ -14,15 +14,20 @@
     ~/.config/interrobang: interrobang
     ~/.config/ranger: ranger/
     ~/.ncmpcpp: ncmpcpp
+    ~/.zshrc:
+        force: true
+        path: zshrc
     ~/.bashrc:
         force: true
         path: bashrc
-    ~/.bash_aliases: bash_aliases
+    ~/.alias: bash_aliases
     ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc:
         force: true
         path: xinitrc
     ~/.local/share/fonts: fonts/
+        path: fonts
+        create: yes
 - shell:
     - git submodule update --init --recursive

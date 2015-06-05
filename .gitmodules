@@ -41,3 +41,4 @@
 [submodule "vim/bundle/vim-youcompleteme"]
 	path = vim/bundle/vim-youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe
+	ignore = dirty
