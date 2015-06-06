@@ -18,7 +18,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:DejaVu Sans Mono 8 
+#font pango:DejaVu Sans Mono 8
 font pango: URW Gothic L Book 8, FontAwesome 8
 #font pango: Terminus, FontAwesome 12
 
@@ -37,7 +37,7 @@ workspace "7misc" output LVDS1
 
 # KEY BINDINGS
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show 
+bindsym $mod+minus scratchpad show
 
 # Open a terminal
 bindsym $mod+Return exec urxvtc
@@ -59,8 +59,8 @@ bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 bindsym $mod+d exec --no-startup-id interrobang
 
 # change focus
-bindsym $mod+h focus left 
-bindsym $mod+j focus down 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
@@ -152,7 +152,7 @@ assign [class="Dwb"] 2www
 assign [class="Clementine"] 5media
 assign [class="Spotify"] 5media
 
-#3.WORK 
+#3.WORK
 assign [class="libreoffice"] 3work
 
 #4.Virt
@@ -226,7 +226,7 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 #exec --no-startup-id compton --config ~/.config/compton.conf -b
 # Start udevil(devon)
 #exec --no-startup-id devmon &
-# Urxvt 
+# Urxvt
 #exec --no-startup-id urxvtd -q -f -o
 
 # Assign to workspace
