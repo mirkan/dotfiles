@@ -11,6 +11,8 @@
     ~/.i3:
         force: true
         path: i3/
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/gtk-3.0: gtk-3.0/
     ~/.config/interrobang: interrobang
     ~/.config/ranger: ranger/
     ~/.ncmpcpp: ncmpcpp
@@ -20,6 +22,7 @@
     ~/.oh-my-zsh:
         force: true
         path: oh-my-zsh/
+    ~/.zlogin: zlogin
     ~/.bashrc:
         force: true
         path: bashrc
