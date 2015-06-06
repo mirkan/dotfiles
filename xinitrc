@@ -2,6 +2,10 @@
 # ~/.xinitrc
 # Executed by startx (run your window manager from here)
 
+# Disable PC beep bell
+xset -b
+setxkbmap se
+# Error logpath for i3
 E_i3=$HOME/.i3log-$(date +'%F-%k-%M-%S')
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
