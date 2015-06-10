@@ -49,3 +49,4 @@
 [submodule "vim/bundle/vim-wiki"]
 	path = vim/bundle/vim-wiki
 	url = https://github.com/vimwiki/vimwiki
+	ignore = dirty
