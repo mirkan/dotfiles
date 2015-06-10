@@ -4,32 +4,34 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Syntax highlightning
+colorscheme solarized
 syntax on
 set number
-set nowrap
+set wrap
 set tabstop=4
 set shiftwidth=4
 set splitright
 set background=dark
-colorscheme solarized
+set ignorecase
+set smartcase
 
 " Hightlighting colors
 highlight SpecialKey guifg=#545454
 highlight NonText guifg=#545454
 
 " Activate mouse
-se mouse+=a
+set mouse+=a
 
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
 
 " Save folds automatically
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
 
 " Trim trailing whitespace
-" autocmd FileType c,cpp,java,php autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType sh,py,java,php autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 " Auto indent
 " http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
@@ -74,25 +76,7 @@ map <F2> :wq!<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
 " Save as root
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
-
-" Xdebug
-let g:vdebug_options= {
-    \    "port" : 9000,
-    \    "server" : 'localhost',
-    \    "timeout" : 20,
-    \    "on_close" : 'detach',
-    \    "break_on_open" : 1,
-    \    "ide_key" : 'vagrant',
-    \    "path_maps" : {},
-    \    "debug_window_level" : 0,
-    \    "debug_file_level" : 0,
-    \    "debug_file" : "",
-    \    "watch_window_style" : 'expanded',
-    \    "marker_default" : '⬦',
-    \    "marker_closed_tree" : '▸',
-    \    "marker_open_tree" : '▾'
-    \}
+" command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " Airline
 set laststatus=2
@@ -107,9 +91,11 @@ let g:airline_left_sep = ''
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "type": "style" }
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/html/'}]
