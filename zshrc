@@ -10,11 +10,11 @@ plugins=(web-search systemd python git vagrant archlinux rand-quote)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
-# export MANPATH="/usr/local/man:$MANPATH"
+#export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.alias
-
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add dir-colors
 #[[ $TERM == "xterm-termite" ]] && eval $(dircolors $HOME/.config/termite/dircolors)
 
