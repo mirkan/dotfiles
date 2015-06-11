@@ -67,4 +67,4 @@ startprog "syndaemon -t -k -i 1 -d" syndaemon
 # Unclutter after 3 seconds
 startprog "unclutter -idle 3" syndaemon
 
-exec i3 -V &>> "$E_i3"
+exec i3 -V
