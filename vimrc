@@ -8,8 +8,8 @@ colorscheme solarized
 syntax on
 set number
 set wrap
-set tabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set shiftwidth=4
 set splitright
 set background=dark
 set ignorecase
@@ -20,17 +20,13 @@ highlight SpecialKey guifg=#545454
 highlight NonText guifg=#545454
 
 " Activate mouse
-set mouse+=a
+"set mouse+=a
 
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
 
-" Save folds automatically
-"au BufWinLeave * mkview
-"au BufWinEnter * silent loadview
-
 " Trim trailing whitespace
-autocmd FileType sh,py,java,php autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType sh,py,java,php,html,css autocmd BufWritePre * :%s/\s\+$//e
 "autocmd BufWritePre * :%s/\s\+$//e
 
 " Auto indent
@@ -42,6 +38,12 @@ set dictionary+=/usr/share/dict/words
 
 " Set chars for tabs and newlines
 set listchars=tab:▸\ ,eol:¬,trail:%
+
+" TEMPLATES/SKELETONS
+autocmd BufNewFile  *.php	0r ~/.vim/templates/template.php
+autocmd BufNewFile  *.py	0r ~/.vim/templates/template.py
+autocmd BufNewFile  *.sh	0r ~/.vim/templates/template.sh
+autocmd BufNewFile  *.html	0r ~/.vim/templates/template.html
 
 " KEY BINDINGS
 " Add newline w/o insert mode
