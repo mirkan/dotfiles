@@ -1,7 +1,7 @@
 ! terminal colors -----
 
-Rxvt*scrollBar:	            false
-Rxvt*font: 					xft:Inconsolata\ for\ Powerline:size=13
+Rxvt*scrollBar:	        false
+Rxvt*font: 		xft:Inconsolata\ for\ Powerline:size=13
 !Rxvt*depth:     	        30
 Rxvt*letterSpace:  	        -1
 Rxvt*intensityStyles:		false
@@ -26,7 +26,6 @@ Rxvt.iso14755_52: false
 #define S_green         #859900
 
 ! Dark
-
 #define S_base03        #001A21
 !#define S_base03        #002b36
 #define S_base02        #073642

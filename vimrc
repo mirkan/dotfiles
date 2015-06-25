@@ -7,6 +7,7 @@ call pathogen#helptags()
 colorscheme solarized
 syntax on
 set number
+set nocompatible
 set wrap
 "set tabstop=4
 "set shiftwidth=4
@@ -100,4 +101,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "type": "style" }
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/html/'}]
+let g:vimwiki_list = [{
+	\ 'path': '$HOME/wiki/',
+	\ 'path_html': '$HOME/wiki/html/',
+  	\ 'template_path': '$HOME/wiki/templates/',
+	\ 'template_default': 'default',
+	\ 'template_ext': '.html'}]

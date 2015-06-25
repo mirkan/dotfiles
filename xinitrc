@@ -44,7 +44,7 @@ startprog "compton --config ~/.config/compton.conf -b" compton
 startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
 
 # Move files from ~/Downloads with inotify
-startprog "$HOME/.bin/sort_downloads.sh"
+#startprog "$HOME/.bin/sort_downloads.sh"
 
 # Start udevil(devon)
 startprog "devmon" devmon
@@ -55,9 +55,6 @@ startprog "urxvtd -q -f -o" urxvtd
 #start xbindkeys - custom keyboard shortcuts
 startprog "xbindkeys" xbindkeys
 
-# Start xflux
-#startprog "xflux -l 55.584526 -g 13.054724" xflux
-
 # Start redshift
 startprog "redshift -l 55.6050:55.6050" redshift
 
@@ -67,4 +64,4 @@ startprog "syndaemon -t -k -i 1 -d" syndaemon
 # Unclutter after 3 seconds
 startprog "unclutter -idle 3" syndaemon
 
-exec i3 -V
+exec i3

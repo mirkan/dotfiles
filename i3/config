@@ -2,21 +2,31 @@
 #
 set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:DejaVu Sans Mono 8
+#font pango: DejaVu Sans Mono 8
 font pango: URW Gothic L Book 8, FontAwesome 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier $mod 
 focus_follows_mouse no
 
+set $tag1 "1main"
+set $tag2 "2www"
+set $tag3 "3work"
+set $tag4 "4virt"
+set $tag5 "5media"
+set $tag6 "6spel"
+set $tag7 "7misc"
+set $tag8 "8log"
+
 #Workspaces
-workspace "1main" output LVDS1
-workspace "2www" output LVDS1
-workspace "3work" output LVDS1
-workspace "4virt" output LVDS1
-workspace "5media" output LVDS1
-workspace "6spel" output LVDS1
-workspace "7misc" output LVDS1
+workspace $tag1 output LVDS1
+workspace $tag2 output LVDS1
+workspace $tag3 output LVDS1
+workspace $tag4 output LVDS1
+workspace $tag5 output LVDS1
+workspace $tag6 output LVDS1
+workspace $tag7 output LVDS1
+workspace $tag8 output LVDS1
 
 # KEY BINDINGS
 bindsym $mod+Shift+minus move scratchpad
@@ -34,10 +44,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 
 # start dmenu/interrobang (a program launcher)
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #bindsym $mod+d exec dmenu_run -sb white -sf black
 bindsym $mod+d exec --no-startup-id interrobang
 
@@ -92,24 +98,24 @@ bindsym $mod+a focus parent
 bindsym $mod+z focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1main
-bindsym $mod+2 workspace 2www
-bindsym $mod+3 workspace 3work
-bindsym $mod+4 workspace 4virt
-bindsym $mod+5 workspace 5media
-bindsym $mod+6 workspace 6spel
-bindsym $mod+7 workspace 7misc
-bindsym $mod+8 workspace 8
+bindsym $mod+1 workspace $tag1
+bindsym $mod+2 workspace $tag2
+bindsym $mod+3 workspace $tag3
+bindsym $mod+4 workspace $tag4
+bindsym $mod+5 workspace $tag5
+bindsym $mod+6 workspace $tag6
+bindsym $mod+7 workspace $tag7
+bindsym $mod+8 workspace $tag8
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1main
-bindsym $mod+Shift+2 move container to workspace 2www
-bindsym $mod+Shift+3 move container to workspace 3work
-bindsym $mod+Shift+4 move container to workspace 4virt
-bindsym $mod+Shift+5 move container to workspace 5media
-bindsym $mod+Shift+6 move container to workspace 6spel
-bindsym $mod+Shift+7 move container to workspace 7misc
-bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+1 move container to workspace $tag1
+bindsym $mod+Shift+2 move container to workspace $tag2
+bindsym $mod+Shift+3 move container to workspace $tag3
+bindsym $mod+Shift+4 move container to workspace $tag4
+bindsym $mod+Shift+5 move container to workspace $tag5
+bindsym $mod+Shift+6 move container to workspace $tag6
+bindsym $mod+Shift+7 move container to workspace $tag7
+bindsym $mod+Shift+8 move container to workspace $tag8
 
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
@@ -213,6 +219,6 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 #exec --no-startup-id urxvtd -q -f -o
 
 # Assign to workspace
-exec --no-startup-id i3-msg 'workspace 1main; exec urxvtc; workspace 1main'
-exec --no-startup-id i3-msg 'workspace 2www; exec firefox --no-startup-id; workspace 1main'
-
+exec --no-startup-id i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
+exec --no-startup-id i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
+exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e zsh -c 'journalctl -af' -no-startup-id; workspace $tag1"

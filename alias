@@ -9,9 +9,10 @@ alias ealias="$EDITOR ~/.alias"
 alias ezsh="$EDITOR ~/.zshrc"
 alias ebash="$EDITOR ~/.bashrc"
 alias exinit="$EDITOR ~/.xinitrc"
-
+# Pacaur
+alias pa="pacaur"
 ## Modified commands
-alias ls="ls --color=auto"
+alias ls="ls --color=auto -1"
 alias grep="grep --color=auto"
 alias df="df -h"
 alias du="du -c -h"

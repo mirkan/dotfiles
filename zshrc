@@ -8,7 +8,7 @@ ZSH_THEME="af-magic"
 plugins=(web-search systemd python git vagrant archlinux rand-quote)
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/bin:/usr/lib/surfraw:$PATH
 export EDITOR=vim
 #export MANPATH="/usr/local/man:$MANPATH"
 

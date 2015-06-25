@@ -29,9 +29,9 @@ TEXT
 		$else
 			{"full_text": "≈ ---","color":"\#33CC99"},$endif$endif
 ### MAIL
-		${if_match ${execpi 300 ~/.i3/conky/imap.pl} != 0}
-			{"full_text": "", "color" : "\#5d5d5d"},
-			{"full_text": "${exec ~/.i3/conky/imap.pl}"},$endif
+#		${if_match ${exec ~/.i3/conky/imap.pl} != 0}
+#			{"full_text": "", "color" : "\#5d5d5d"},
+#			{"full_text": "${exec ~/.i3/conky/imap.pl}"},$endif
 ### DISK
 		{"full_text": "", "color" : "\#5d5d5d"},
 		{"full_text": "${fs_free /home}"},
