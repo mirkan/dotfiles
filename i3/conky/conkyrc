@@ -9,10 +9,9 @@ pad_percents 4
 if_up_strictness link
 override_utf8_locale yes
 mpd_port 6600
-
 TEXT
 ### MPD
-	,[${if_mpd_playing}
+		,[${if_mpd_playing}
 		{"full_text": "♫","color": "\#4d8514"},
   		{"full_text": "$mpd_smart"},$endif
 ### CPU
@@ -38,8 +37,13 @@ TEXT
 		{"full_text": "/", "color" : "\#5d5d5d"},
 		{"full_text": "${fs_free /}"},
 ### POWER
-		{"full_text": "", "color" : "\#5d5d5d"},
-		{"full_text": "${battery_percent BAT1}%"},
+		${if_match ${battery_percent BAT1} > 10 }
+			{"full_text": "", "color" : "\#5d5d5d"},
+			{"full_text": "${battery_percent BAT1}%"},
+		$else
+			{"full_text": "", "color" : "\#5d5d5d"},
+			{"full_text": "${battery_percent BAT1}%", "color" : "\#ff0000"},
+		$endif
 ### VOLUME - Pulseaudio
 		{"full_text": "", "color" : "\#5d5d5d"},
 		{"full_text": "${exec pamixer --get-volume}%"},
