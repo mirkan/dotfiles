@@ -1,16 +1,13 @@
 " Pathogen
-"execute pathogen#infect()
 call pathogen#infect()
 call pathogen#helptags()
 
 " Syntax highlightning
 colorscheme solarized
 syntax on
+set wrap
 set number
 set nocompatible
-set wrap
-"set tabstop=4
-"set shiftwidth=4
 set splitright
 set background=dark
 set ignorecase
@@ -28,10 +25,8 @@ autocmd! bufwritepost .vimrc source %
 
 " Trim trailing whitespace
 autocmd FileType sh,py,java,php,html,css autocmd BufWritePre * :%s/\s\+$//e
-"autocmd BufWritePre * :%s/\s\+$//e
 
 " Auto indent
-" http://vim.wikia.com/wiki/Keep_your_vimrc_file_clean
 filetype indent plugin on
 
 " Activate dictionary
@@ -107,3 +102,6 @@ let g:vimwiki_list = [{
   	\ 'template_path': '$HOME/wiki/templates/',
 	\ 'template_default': 'default',
 	\ 'template_ext': '.html'}]
+
+" youcompleteme
+let g:ycm_autoclose_preview_window_after_insertion = '1'
