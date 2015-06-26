@@ -4,7 +4,7 @@
 
 # Disable PC beep bell
 xset -b
-setxkbmap se
+setxkbmap se -option terminate:ctrl_alt_bksp
 
 # Error logpath for i3
 #E_i3=$HOME/.i3log-$(date +'%F-%k-%M-%S')
