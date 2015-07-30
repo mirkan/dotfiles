@@ -10,15 +10,13 @@
 # Increase volume
 #"pamixer --increase 5"
 "pactl set-sink-volume 0 +5%"
-  Mod4+F3
+  XF86AudioRaiseVolume
 # Decrease volume
-#"pamixer --decrease 5"
 "pactl set-sink-volume 0 -5%"
-  Mod4+F2
+  XF86AudioLowerVolume
 # Mute volume
-#"pamixer --toggle-mute"
 "pactl set-sink-mute 0 toggle"
-  Mod4+F1
+  XF86AudioMute
 
 #ALSA
 # Increase volume
