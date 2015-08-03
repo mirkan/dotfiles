@@ -17,7 +17,7 @@ export HISTSIZE=
 #export PAGER='vimpager'
 
 # Prompt style
-PS1='\[\e[0;31m\]\u\[\e[m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0m\] '
+PS1='\[\e[0;31m\]\u\[\e[0;32m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0m\] '
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
