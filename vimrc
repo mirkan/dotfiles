@@ -56,10 +56,10 @@ no <left> <Nop>
 no <right> <Nop>
 no <up> <Nop>
 
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
 
 vno <down> <Nop>
 vno <left> <Nop>

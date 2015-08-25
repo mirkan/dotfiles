@@ -9,6 +9,7 @@ alias ealias="$EDITOR ~/.alias"
 alias ezsh="$EDITOR ~/.zshrc"
 alias ebash="$EDITOR ~/.bashrc"
 alias exinit="$EDITOR ~/.xinitrc"
+
 # Pacaur
 alias pa="pacaur"
 ## Modified commands
@@ -45,8 +46,11 @@ alias psc="ps xawf -eo pid,user,cgroup,args"
 ## journalctl
 alias errors="sudo journalctl -p 0..3 -xn"
 
+## rsync
+alias rsync="rsync --progress"
+
 ## ls
-alias ll="ls -l"
+alias ll="ls -lh"
 alias la="ll -lah"
 alias lz="ll -rS"                   			# sort by size
 #alias ls="ls -hF --color=auto"

@@ -5,6 +5,8 @@
 # Disable PC beep bell
 xset -b
 setxkbmap se -option terminate:ctrl_alt_bksp
+# Disable Caps lock
+setxkbmap -option caps:none
 
 # Error logpath for i3
 #E_i3=$HOME/.i3log-$(date +'%F-%k-%M-%S')
@@ -56,7 +58,7 @@ startprog "urxvtd -q -f -o" urxvtd
 startprog "xbindkeys" xbindkeys
 
 # Start redshift
-startprog "redshift -l 55.6050:55.6050" redshift
+#startprog "redshift -l 55.6050:55.6050" redshift
 
 # Avoid touchpad tapping while tapping
 startprog "syndaemon -t -k -i 1 -d" syndaemon
