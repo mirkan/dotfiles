@@ -105,3 +105,6 @@ let g:vimwiki_list = [{
 
 " youcompleteme
 let g:ycm_autoclose_preview_window_after_insertion = '1'
+
+" quick-scope
+let g:qs_highlight_on_keys = ['f', 'F']

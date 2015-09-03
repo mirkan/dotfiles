@@ -48,6 +48,7 @@
 # Take full screenshot of display and save to ~/.screenshots
 "~/.bin/screenshot"
   Print
+# BRIGHTNESS
 # Better brightness adjustment	
 "~/.bin/brightness.sh up"
   XF86MonBrightnessUp

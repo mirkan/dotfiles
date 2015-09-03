@@ -11,7 +11,8 @@ plugins=(web-search systemd python git vagrant archlinux rand-quote)
 export PATH=$HOME/.bin:/usr/local/bin:/usr/lib/surfraw:$PATH
 export EDITOR=vim
 #export MANPATH="/usr/local/man:$MANPATH"
-
+#
+source /usr/lib/z.sh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.alias
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -68,5 +69,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias ezsh="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

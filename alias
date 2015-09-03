@@ -128,6 +128,19 @@ cl() {
         echo "bash: cl: "$1": Directory not found"
     fi
 }
+# Vagrant
+alias vagup="vagrant up"
+alias vagssh="vagrant ssh"
+alias vagoff="vagrant halt -f"
+alias vagsup="vagrant up; vagrant ssh"
+alias vagalloff="command $HOME/.bin/vagrant_shutdown.sh"
+#vagrant() {
+#    if [[ $@ == "global-halt" ]]; then
+#        command ./.bin/vagrant_shutdown.sh
+#    else
+#        command vagrant "$@"
+#    fi
+#}
 # SSH
 alias sshgen="ssh-keygen -t rsa -C $1"
 # Start all modules required for VirtualBox

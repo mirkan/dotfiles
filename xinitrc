@@ -40,7 +40,7 @@ startprog() {
 
 ## STARTUPS
 # Compton
-startprog "compton --config ~/.config/compton.conf -b" compton
+#startprog "compton --config ~/.config/compton.conf -b" compton
 
 # Set and rotate wallpaper every 30min
 startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
@@ -58,7 +58,7 @@ startprog "urxvtd -q -f -o" urxvtd
 startprog "xbindkeys" xbindkeys
 
 # Start redshift
-#startprog "redshift -l 55.6050:55.6050" redshift
+startprog "redshift -l 55.6050:55.6050" redshift
 
 # Avoid touchpad tapping while tapping
 startprog "syndaemon -t -k -i 1 -d" syndaemon

@@ -221,4 +221,5 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 # Assign to workspace
 exec --no-startup-id i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
 exec --no-startup-id i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
-exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e zsh -c 'journalctl -af' -no-startup-id; workspace $tag1"
+exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'ssh brix journalctl -af' -no-startup-id; workspace $tag1"
+exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'journalctl -af' -no-startup-id; workspace $tag1"
