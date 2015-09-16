@@ -84,17 +84,6 @@ alias cls=" echo -ne "\033c""       			# clear screen for real (it does not work
 # "[r]emove [o]rphans" - recursively remove ALL orphaned packages
 #alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rs \$(/usr/bin/pacman -Qtdq | sed -e ":a;N;$!ba;s/\n/ /g")"
 
-# ToDo.txt
-if [ -d "$HOME/.todo" ]; then
-
-	export TODOTXT_DEFAULT_ACTION=ls
-	source ~/.todo/todo_completion
-
-	alias t="todo.sh -ftd /home/robin/.todo/todo.cfg"
-	#autocomplete for alias "t"
-	[[ ! $ZSH ]] && complete -F _todo t
-	#Default action "t" lists uncompleted tasks
-fi
 
 # extract function
     ext () {
