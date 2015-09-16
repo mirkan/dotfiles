@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=vim
 
+export TERM=xterm
 # Set theme
 ZSH_THEME="pygmalion"
 
