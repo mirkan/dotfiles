@@ -1,8 +1,6 @@
 [user]
 	email = robin@bjornsvik.se
 	name = mirkan
-[push]
-	default = simple
 [alias]
 	co = checkout
 	br = branch
