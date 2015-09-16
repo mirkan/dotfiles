@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR=vim
 
 # Set theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="pygmalion"
 
 # Select plugins
 plugins=(systemd python git vagrant)
