@@ -1,24 +1,23 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export BROWSER="firefox"
+export VAGRANT_HOME="$HOME/vagrant/.vagrant.d/"
+export PATH=$HOME/.bin:/usr/local/bin:/usr/lib/surfraw:$PATH
+export EDITOR=vim
+
 # Set theme
 ZSH_THEME="af-magic"
 
 # Select plugins
 plugins=(web-search systemd python git vagrant archlinux rand-quote)
 
-# User configuration
-export PATH=$HOME/.bin:/usr/local/bin:/usr/lib/surfraw:$PATH
-export EDITOR=vim
-#export MANPATH="/usr/local/man:$MANPATH"
-#
+# Source
 source /usr/lib/z.sh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.alias
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add dir-colors
 #[[ $TERM == "xterm-termite" ]] && eval $(dircolors $HOME/.config/termite/dircolors)
-
 
 # Examples...
 # You may need to manually set your language environment

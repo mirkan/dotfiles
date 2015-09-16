@@ -1,7 +1,7 @@
 ! terminal colors -----
 
 Rxvt*scrollBar:	        false
-Rxvt*font: 		xft:Inconsolata\ for\ Powerline:size=13
+Rxvt*font: 		xft:Inconsolata\ for\ Powerline:size=16
 !Rxvt*depth:     	        30
 Rxvt*letterSpace:  	        -1
 Rxvt*intensityStyles:		false
@@ -50,7 +50,7 @@ Rxvt.iso14755_52: false
 ! Set colors
 *background:              S_base03
 *foreground:              S_base0
-*fading:                  40
+!*fading:                  30
 *fadeColor:               S_base03
 *cursorColor:             S_base1
 *pointerColorBackground:  S_base01

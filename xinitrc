@@ -48,22 +48,11 @@ startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
 # Move files from ~/Downloads with inotify
 #startprog "$HOME/.bin/sort_downloads.sh"
 
-# Start udevil(devon)
 startprog "devmon" devmon
-
-# Urxvt
 startprog "urxvtd -q -f -o" urxvtd
-
-#start xbindkeys - custom keyboard shortcuts
 startprog "xbindkeys" xbindkeys
-
-# Start redshift
 startprog "redshift -l 55.6050:55.6050" redshift
-
-# Avoid touchpad tapping while tapping
 startprog "syndaemon -t -k -i 1 -d" syndaemon
-
-# Unclutter after 3 seconds
 startprog "unclutter -idle 3" syndaemon
-
+startprog "tresorit --hidden" tresorit
 exec i3

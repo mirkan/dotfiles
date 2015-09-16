@@ -37,7 +37,6 @@ if [ $UID -ne 0 ]; then
     alias poweroff="sudo systemctl poweroff"
     alias update="sudo pacman -Su"
     alias netctl="sudo netctl"
-    alias systemctl="sudo systemctl"
 fi
 
 ## ps
@@ -134,6 +133,7 @@ alias vagssh="vagrant ssh"
 alias vagoff="vagrant halt -f"
 alias vagsup="vagrant up; vagrant ssh"
 alias vagalloff="command $HOME/.bin/vagrant_shutdown.sh"
+alias vagrel="vagrant halt -f; vagrant up"
 #vagrant() {
 #    if [[ $@ == "global-halt" ]]; then
 #        command ./.bin/vagrant_shutdown.sh

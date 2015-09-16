@@ -12,6 +12,8 @@ set splitright
 set background=dark
 set ignorecase
 set smartcase
+set shiftwidth=4
+set tabstop=4
 
 " Hightlighting colors
 highlight SpecialKey guifg=#545454
