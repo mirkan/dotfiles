@@ -137,12 +137,5 @@ alias modvbox="sudo modprobe vboxdrv;sudo modprobe vboxnetadp;sudo modprobe vbox
 alias wakebrix="wol 74:d4:35:69:d2:fe"
 alias python="/usr/bin/python2"
 alias showcolors="$HOME/.scripts/print_colorscheme.sh"
-#alias veewee="bundle exec veewee"
 
-# bash-git-prompt
-if [[ -f $HOME/.bash-git-prompt/gitprompt.sh && ! $ZSH ]]; then
-	GIT_PROMPT_ONLY_IN_REPO=1
-	GIT_PROMPT_THEME=Solarized
-	source $HOME/.bash-git-prompt/gitprompt.sh
-fi
 #vim: set syntax=sh
