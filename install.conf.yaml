@@ -1,39 +1,22 @@
 - clean: ['~/', '~/.config']
 - shell:
-    - mkdir -p ~/.config ~/.local/share
+    - mkdir -p ~/.config
 - link:
     ~/.vim: vim/
     ~/.vimrc:
         force: true
         path: vimrc
-    ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
-    ~/.i3:
-        force: true
-        path: i3/
-    ~/.gtkrc-2.0: gtkrc-2.0
-    ~/.config/gtk-3.0: gtk-3.0/
-    ~/.config/interrobang: interrobang
-    ~/.config/ranger: ranger/
-    ~/.ncmpcpp: ncmpcpp
     ~/.zshrc:
         force: true
         path: zshrc
     ~/.oh-my-zsh:
         force: true
         path: oh-my-zsh/
-    ~/.zlogin: zlogin
     ~/.bashrc:
         force: true
         path: bashrc
     ~/.alias: alias
     ~/.Xresources: Xresources
-    ~/.xbindkeysrc: xbindkeysrc
-    ~/.xinitrc:
-        force: true
-        path: xinitrc
-    ~/.local/share/fonts:
-        path: fonts/
-        create: yes
-- shell:
-    - git submodule update --init --recursive
+#- shell:
+#    - git submodule update --init --recursive

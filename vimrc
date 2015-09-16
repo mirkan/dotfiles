@@ -31,9 +31,6 @@ autocmd FileType sh,py,java,php,html,css autocmd BufWritePre * :%s/\s\+$//e
 " Auto indent
 filetype indent plugin on
 
-" Activate dictionary
-set dictionary+=/usr/share/dict/words
-
 " Set chars for tabs and newlines
 set listchars=tab:▸\ ,eol:¬,trail:%
 
