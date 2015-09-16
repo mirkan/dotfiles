@@ -18,5 +18,5 @@
         path: bashrc
     ~/.alias: alias
     ~/.Xresources: Xresources
-#- shell:
-#    - git submodule update --init --recursive
+- shell:
+    - git submodule update --init --recursive
