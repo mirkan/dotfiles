@@ -3,7 +3,6 @@
 "call pathogen#helptags()
 
 " Syntax highlightning
-colorscheme solarized
 syntax on
 set wrap
 set number
@@ -18,9 +17,6 @@ set tabstop=4
 " Hightlighting colors
 highlight SpecialKey guifg=#545454
 highlight NonText guifg=#545454
-
-" Activate mouse
-"set mouse+=a
 
 " Reload vimrc after save
 autocmd! bufwritepost .vimrc source %
@@ -55,10 +51,10 @@ no <left> <Nop>
 no <right> <Nop>
 no <up> <Nop>
 
-"ino <down> <Nop>
-"ino <left> <Nop>
-"ino <right> <Nop>
-"ino <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
 
 vno <down> <Nop>
 vno <left> <Nop>
