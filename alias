@@ -149,5 +149,5 @@ alias modvbox="sudo modprobe vboxdrv;sudo modprobe vboxnetadp;sudo modprobe vbox
 alias wakebrix="wol 74:d4:35:69:d2:fe"
 alias python="/usr/bin/python2"
 alias showcolors="$HOME/.scripts/print_colorscheme.sh"
-
+alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 #vim: set syntax=sh
