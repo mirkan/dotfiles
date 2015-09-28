@@ -2,6 +2,10 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "vim/bundle/vim-youcompleteme"]
+	path = vim/bundle/vim-you-completeme
+	url = https://github.com/Valloric/YouCompleteMe
+	ignore = dirty
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode
@@ -33,10 +37,6 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-	ignore = dirty
-[submodule "vim/bundle/vim-youcompleteme"]
-	path = vim/bundle/vim-youcompleteme
-	url = https://github.com/Valloric/YouCompleteMe
 	ignore = dirty
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
