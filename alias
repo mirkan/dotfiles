@@ -3,6 +3,7 @@
 
 ## Aliases
 ## Edit configs
+alias se="sudoedit"
 alias evim="$EDITOR ~/.vimrc"
 alias ei3="$EDITOR ~/.i3/config"
 alias ealias="$EDITOR ~/.alias"
@@ -56,7 +57,7 @@ alias lz="ll -rS"                   			# sort by size
 #alias lr="ls -R"                    			# recursive ls
 #alias lx="ll -BX"                   			# sort by extension
 #alias lt="ll -rt"                   			# sort by date
-#alias lm="la | more"
+alias lm="la | more"
 
 ## Safety features ## {{{
 alias cp="cp -i"
