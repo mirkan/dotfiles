@@ -14,13 +14,13 @@ conky.config = {
 
 conky.text = [[
 ## MPD
-		,[${if_mpd_playing}
-			{"full_text": "♫","color": "\#4d8514"},
-			{"full_text": "$mpd_smart"},$endif
+#		,[${if_mpd_playing}
+#			{"full_text": "♫","color": "\#4d8514"},
+#			{"full_text": "$mpd_smart"},$endif
 ### CPU
 		#{"full_text": "❤ $acpitemp°C [$cpu%]","color": "\#DC322F"},
 ### WIFI
- 		${if_up wlp3s0}
+ 		,[${if_up wlp3s0}
 			{"full_text": "","color":"\#33CC99"},
 			{"full_text": "${wireless_essid wlp3s0}[${wireless_link_qual_perc wlp3s0}%]"},
 			{"full_text": "Down: ${totaldown wlp3s0}"},
