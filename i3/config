@@ -9,31 +9,37 @@ font pango: URW Gothic L Book 8, FontAwesome 8
 floating_modifier $mod 
 focus_follows_mouse no
 
+#GAPS
+#gaps inner 2
+#gaps outer 2
+
+#Workspaces
 set $tag1 "1main"
 set $tag2 "2www"
 set $tag3 "3work"
 set $tag4 "4virt"
 set $tag5 "5media"
 set $tag6 "6spel"
-set $tag7 "7misc"
+set $tag7 "7mail"
 set $tag8 "8log"
+set $tag5 "9irc"
 
-#Workspaces
 workspace $tag1 output LVDS1
 workspace $tag2 output LVDS1
 workspace $tag3 output LVDS1
-workspace $tag4 output LVDS1
+workspace $tag4 output HDMI1
 workspace $tag5 output LVDS1
 workspace $tag6 output LVDS1
 workspace $tag7 output LVDS1
 workspace $tag8 output LVDS1
+workspace $tag9 output LVDS1
 
 # KEY BINDINGS
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Open a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec urxvt
 # Open terminal w/ ranger
 bindsym $mod+BackSpace exec urxvtc -e bash -c "ranger"
 
@@ -45,7 +51,8 @@ bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 
 # start dmenu/interrobang (a program launcher)
 #bindsym $mod+d exec dmenu_run -sb white -sf black
-bindsym $mod+d exec --no-startup-id interrobang
+#bindsym $mod+d exec --no-startup-id interrobang
+bindsym $mod+d exec --no-startup-id rofi -auto-select -show run
 
 # change focus
 bindsym $mod+h focus left
@@ -106,6 +113,7 @@ bindsym $mod+5 workspace $tag5
 bindsym $mod+6 workspace $tag6
 bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace $tag8
+bindsym $mod+9 workspace $tag9
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $tag1
@@ -116,6 +124,7 @@ bindsym $mod+Shift+5 move container to workspace $tag5
 bindsym $mod+Shift+6 move container to workspace $tag6
 bindsym $mod+Shift+7 move container to workspace $tag7
 bindsym $mod+Shift+8 move container to workspace $tag8
+bindsym $mod+Shift+9 move container to workspace $tag9
 
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
@@ -138,19 +147,23 @@ assign [class="Firefox"] 2www
 assign [class="Dwb"] 2www
 
 #3.MUSIK
-assign [class="Clementine"] 5media
-assign [class="Spotify"] 5media
+assign [class="Clementine"] $tag5
+assign [class="Spotify"] $tag5
 
 #3.WORK
-assign [class="libreoffice"] 3work
+assign [class="libreoffice"] $tag3
 
 #4.Virt
 assign [class="VirtualBox"] 4virt
+assign [class="Virt-manager"] 4virt
 
 #5.SPEL
 assign [class="Wine" instance="Gw.exe"] 6spel
 assign [class="Steam"] 6spel
 assign [class="Skype"] 6spel
+
+# MAIL
+assign [class="Thunderbird"] $tag7
 
 # PREVENT TILING WINDOWS, FLOAT:
 for_window [class="Pavucontrol"] floating enable
@@ -222,5 +235,6 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 # Assign to workspace
 exec --no-startup-id i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
 exec --no-startup-id i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
-exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'ssh brix journalctl -af' -no-startup-id; workspace $tag1"
-exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'journalctl -af' -no-startup-id; workspace $tag1"
+#exec --no-startup-id i3-msg "workspace $tag5; exec urxvtc -e sh -c 'tmux attach -t irc' -no-startup-id; workspace $tag1"
+#exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'ssh brix journalctl -af' -no-startup-id; workspace $tag1"
+exec --no-startup-id i3-msg "workspace $tag8; exec urxvtc -e sh -c 'journalctl -p0..6 -f' -no-startup-id; workspace $tag1"

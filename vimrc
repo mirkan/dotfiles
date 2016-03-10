@@ -4,7 +4,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Syntax highlightning
-colorscheme solarized
+"colorscheme solarized
 syntax on
 set wrap
 set number
@@ -77,13 +77,13 @@ map <F2> :wq!<CR>
 " command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "" Airline
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:Powerline_symbols = 'fancy'
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
+"set laststatus=2
+"let g:airline_powerline_fonts = 1
+"let g:Powerline_symbols = 'fancy'
+"let g:airline_right_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_left_alt_sep= ''
+"let g:airline_left_sep = ''
 
 "" Syntastic
 set statusline+=%#warningmsg#
@@ -96,12 +96,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = { "type": "style" }
 
 "" vimwiki
-let g:vimwiki_list = [{
-	\ 'path': '$HOME/wiki/',
-	\ 'path_html': '$HOME/wiki/html/',
-  	\ 'template_path': '$HOME/wiki/templates/',
-	\ 'template_default': 'default',
-	\ 'template_ext': '.html'}]
+"let g:vimwiki_list = [{
+"	\ 'path': '$HOME/wiki/',
+"	\ 'path_html': '$HOME/wiki/html/',
+"  	\ 'template_path': '$HOME/wiki/templates/',
+"	\ 'template_default': 'default',
+"	\ 'template_ext': '.html'}]
 
 "" youcompleteme
 let g:ycm_autoclose_preview_window_after_insertion = '1'
