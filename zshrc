@@ -10,13 +10,10 @@ export EDITOR=vim
 # Set theme
 ZSH_THEME="agnoster"
 
-# Select plugins
-plugins=(web-search systemd python git vagrant archlinux rand-quote)
-
 # Source
 [[ -f /usr/lib/z.sh ]] && source "/usr/lib/z.sh"
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
-[[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -f "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 [[ -f "$HOME/.alias/general_alias" ]] && source "$HOME/.alias/general_alias"
 
 # Load alias and plugins depending on dist
