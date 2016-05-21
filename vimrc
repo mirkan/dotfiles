@@ -8,6 +8,7 @@ call pathogen#helptags()
 syntax on
 set wrap
 set number
+set relativenumber
 set nocompatible
 set splitright
 set background=dark
@@ -46,28 +47,38 @@ autocmd BufNewFile  *.html	0r ~/.vim/templates/template.html
 
 " KEY BINDINGS
 " Add newline w/o insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+"nmap <S-Enter> O<Esc>
+"nmap <CR> o<Esc>
 
 " Search and Replace. Second line with confirmation.
 noremap ;; :%s:::g<Left><Left><Left>
 noremap ;' :%s:::cg<Left><Left><Left><Left>
 
 " Disable arrow keys
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
-
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
+"no <down> <Nop>
+"no <left> <Nop>
+"no <right> <Nop>
+"no <up> <Nop>
+"
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
+"
+"vno <down> <Nop>
+"vno <left> <Nop>
+"vno <right> <Nop>
+"vno <up> <Nop>
+vmap <C-j> gj
+vmap <C-k> gk
+vmap <C-4> g$
+vmap <C-6> g^
+vmap <C-0> g^
+nmap <C-j> gj
+nmap <C-k> gk
+nmap <C-4> g$
+nmap <C-6> g^
+nmap <C-0> g^
 
 " Map F2 to save and close
 map <F2> :wq!<CR>

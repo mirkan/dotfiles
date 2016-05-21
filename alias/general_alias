@@ -1,5 +1,5 @@
 # .alias
-# Aliases and exports
+# General aliases
 
 ## Aliases
 ## Edit configs
@@ -11,8 +11,6 @@ alias ezsh="$EDITOR ~/.zshrc"
 alias ebash="$EDITOR ~/.bashrc"
 alias exinit="$EDITOR ~/.xinitrc"
 
-# Pacaur
-alias pa="pacaur"
 ## Modified commands
 alias ls="ls --color=auto -1"
 alias grep="grep --color=auto"
@@ -70,33 +68,6 @@ alias chmod="chmod --preserve-root"
 alias chgrp="chgrp --preserve-root"
 alias cls=" echo -ne "\033c""       			# clear screen for real (it does not work in Terminology)
 
-## Pacman
-#alias pacman="sudo pacman"
-#alias pac="sudo /usr/bin/pacman -S"				# default action	- install one or more packages
-#alias pacu="sudo /usr/bin/pacman -Syu"			# "[u]pdate"		- upgrade all packages to their newest version
-#alias pacr="sudo /usr/bin/pacman -Rs"			# "[r]emove"		- uninstall one or more packages
-#alias pacs="/usr/bin/pacman -Ss"				# "[s]earch"		- search for a package using one or more keywords
-#alias paci="/usr/bin/pacman -Si"				# "[i]nfo"		- show information about a package
-#alias paclo="/usr/bin/pacman -Qdt"				# "[l]ist [o]rphans"	- list all packages which are orphaned
-#alias pacc="sudo /usr/bin/pacman -Scc"			# "[c]lean cache"	- delete all not currently installed package files
-#alias paclf="/usr/bin/pacman -Ql"				# "[l]ist [f]iles"	- list all files installed by a given package
-#alias pacexpl="/usr/bin/pacman -D --asexp"		# "mark as [expl]icit"	- mark one or more packages as explicitly installed
-#alias pacimpl="/usr/bin/pacman -D --asdep"		# "mark as [impl]icit"	- mark one or more packages as non explicitly installed
-# "[r]emove [o]rphans" - recursively remove ALL orphaned packages
-#alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rs \$(/usr/bin/pacman -Qtdq | sed -e ":a;N;$!ba;s/\n/ /g")"
-
-# ToDo.txt
-if [ -d "$HOME/.todo" ]; then
-
-	export TODOTXT_DEFAULT_ACTION=ls
-	source ~/.todo/todo_completion
-
-	alias t="todo.sh -ftd /home/robin/.todo/todo.cfg"
-	#autocomplete for alias "t"
-	[[ ! $ZSH ]] && complete -F _todo t
-	#Default action "t" lists uncompleted tasks
-fi
-
 # extract function
     ext () {
       if [ -f $1 ] ; then
@@ -129,12 +100,12 @@ cl() {
     fi
 }
 # Vagrant
-alias vagup="vagrant up"
-alias vagssh="vagrant ssh"
-alias vagoff="vagrant halt -f"
-alias vagsup="vagrant up; vagrant ssh"
-alias vagalloff="command $HOME/.bin/vagrant_shutdown.sh"
-alias vagrel="vagrant halt -f; vagrant up"
+#alias vagup="vagrant up"
+#alias vagssh="vagrant ssh"
+#alias vagoff="vagrant halt -f"
+#alias vagsup="vagrant up; vagrant ssh"
+#alias vagalloff="command $HOME/.bin/vagrant_shutdown.sh"
+#alias vagrel="vagrant halt -f; vagrant up"
 #vagrant() {
 #    if [[ $@ == "global-halt" ]]; then
 #        command ./.bin/vagrant_shutdown.sh
@@ -153,4 +124,5 @@ alias showcolors="$HOME/.scripts/print_colorscheme.sh"
 alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 alias vpn="sudo vpnc-disconnect; sudo vpnc"
 alias vpnd="sudo vpnc-disconnect"
+alias fixscreens="xrandr --output HDMI1 --left-of LVDS1 --auto; ~/.bin/wallpaper_rotate"
 #vim: set syntax=sh

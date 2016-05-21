@@ -28,7 +28,7 @@
     ~/.bashrc:
         force: true
         path: bashrc
-    ~/.alias: alias
+    ~/.alias: alias/
     ~/.Xresources: Xresources
     ~/.xbindkeysrc: xbindkeysrc
     ~/.xinitrc:

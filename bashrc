@@ -1,4 +1,4 @@
-#
+#!/bin/bash
 # ~/.bashrc
 #
 
@@ -17,8 +17,8 @@ export PAGER='vimpager'
 [[ $- != *i* ]] && return
 
 # Include aliases and exports
-[[ -f $HOME/.alias ]] && source $HOME/.alias
-[[ -f $HOME/.bash_exports ]] && source $HOME/.bash_exports
+[[ -f $HOME/.alias ]] && "source $HOME/.alias"
+[[ -f $HOME/.bash_exports ]] && "source $HOME/.bash_exports"
 
 # Autojump
 [[ -f /etc/profile.d/autojump.bash ]] && source /etc/profile.d/autojump.bash
