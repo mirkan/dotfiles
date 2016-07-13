@@ -1,0 +1,1 @@
+/home/robin/.bin/i3/i3-workspace.sh
