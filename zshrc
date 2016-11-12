@@ -3,9 +3,10 @@ DIST=$(lsb_release -is)
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export BROWSER="firefox"
-export VAGRANT_HOME="$HOME/vagrant/.vagrant.d/"
-export PATH=$HOME/.bin:/usr/local/bin:/usr/lib/surfraw:$PATH
+#export VAGRANT_HOME="$HOME/vagrant/.vagrant.d/"
+#export PATH=sr/local/bin:$PATH
 export EDITOR=vim
+export LIBVIRT_DEFAULT_URI="qemu+ssh://robin@gen8/system"
 # Set theme
 ZSH_THEME="agnoster"
 

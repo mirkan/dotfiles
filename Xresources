@@ -82,11 +82,11 @@ Rxvt.iso14755_52: false
 ! Enabled modi
 rofi.modi:                           window,run,ssh,edits
 ! Window opacity
-rofi.opacity:                        100
+rofi.opacity:                        80
 ! Window width
 rofi.width:                          50
 ! Number of lines
-rofi.lines:                          15
+rofi.lines:                          10
 ! Number of columns
 rofi.columns:                        1
 ! Font to use

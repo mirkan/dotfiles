@@ -3,7 +3,7 @@
 #
 
 ## Paths
-PATH=$PATH:"/home/robin/.todo/:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/:/home/robin/.bin/"
+PATH=$PATH:""
 
 ## Exports
 export EDITOR=vim
@@ -17,7 +17,7 @@ export PAGER='vimpager'
 [[ $- != *i* ]] && return
 
 # Include aliases and exports
-[[ -f $HOME/.alias ]] && "source $HOME/.alias"
+[[ -f $HOME/.alias/general_alias ]] && "source $HOME/.alias/general_alias"
 [[ -f $HOME/.bash_exports ]] && "source $HOME/.bash_exports"
 
 # Autojump
@@ -28,8 +28,3 @@ export PAGER='vimpager'
 
 # Prompt style
 PS1='\[\e[0;31m\]\u\[\e[m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0m\] '
-
-# DISPLAY
-#command todo.sh list @todo | head -n -2
-#command echo "----------------------"
-command fortune -s

@@ -11,9 +11,7 @@
         force: true
         path: i3/
     ~/.i3blocks.conf: i3blocks.conf
-    ~/.gtkrc-2.0: gtkrc-2.0
     ~/.config/dunst/dunstrc: dunst/
-    ~/.config/gtk-3.0: gtk-3.0/
     ~/.config/ranger: ranger/
     ~/.zlogin: zlogin
     ~/.zshrc:
