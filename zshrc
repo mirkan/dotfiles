@@ -2,7 +2,7 @@
 DIST=$(lsb_release -is)
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export BROWSER="firefox"
+export BROWSER="chromium"
 #export VAGRANT_HOME="$HOME/vagrant/.vagrant.d/"
 #export PATH=sr/local/bin:$PATH
 export EDITOR=vim

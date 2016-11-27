@@ -7,7 +7,7 @@ Rxvt*letterSpace:  	        -1
 Rxvt*termName: rxvt
 Rxvt*intensityStyles:		false
 Rxvt.perl-ext-common: 		default,matcher
-Rxvt.url-launcher: 			/usr/bin/firefox
+Rxvt.url-launcher: 			/usr/bin/chromium
 Rxvt.matcher.button: 		1
 Rxvt.colorUL: 				#4682B4
 URxvt*.transparent: true

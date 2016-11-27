@@ -13,6 +13,7 @@ focus_follows_mouse no
 #gaps inner 2
 #gaps outer 2
 
+hide_edge_borders smart
 #Workspaces
 set $tag1 "1:main"
 set $tag2 "2:www"
@@ -170,13 +171,12 @@ bindsym $mod+Shift+e exec "$HOME/.bin/i3_powermenu.sh"
 #assign [class="Thunderbird"] $tag7
 
 # PREVENT TILING WINDOWS, FLOAT:
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Wine" instance="Gw.exe"] floating enable
+#for_window [class="Pavucontrol"] floating enable
+#for_window [class="Wine" instance="Gw.exe"] floating enable
 
-hide_edge_borders both
 
 # Hide title for applications:
-for_window [class="Dwb"] border none
+#for_window [class="Dwb"] border none
 for_window [class="URxvt"] border none
 for_window [class="Firefox"] border none
 
@@ -226,17 +226,7 @@ client.focused_inactive #333333 #333333 #888888 #333333
 client.unfocused #333333 #333333 #888888 #333333
 client.urgent #c84d17 #c84d17 #ffffff #c84d17
 
-### AUTOSTART ###
-# Rotate background
-#exec --no-startup-id ~/.scripts/wallpaper_rotate &
-# Compton
-#exec --no-startup-id compton --config ~/.config/compton.conf -b
-# Start udevil(devon)
-#exec --no-startup-id devmon &
-
 # Assign to workspace
 $RUN i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
 $RUN i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
-#$RUN i3-msg "workspace $tag5; exec urxvtc -e sh -c 'tmux attach -t irc' -no-startup-id; workspace $tag1"
-#$RUN i3-msg "workspace $tag8; exec urxvtc -e sh -c 'ssh brix journalctl -af' -no-startup-id; workspace $tag1"
 $RUN i3-msg "workspace $tag0; exec urxvtc -e sh -c 'journalctl -p0..6 -f' -no-startup-id; workspace $tag1"
