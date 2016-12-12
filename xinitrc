@@ -40,13 +40,14 @@ startprog() {
 
 ## STARTUPS
 # Compton
-#startprog "compton --config ~/.config/compton.conf -b" compton
+#xrandr --newmode 2560x1440  312.25  2560 2752 3024 3488  1440 1443 1448 1493 -hsync +vsync
+#xrandr --newmode "2560x1440"  222.52  2560 2720 2992 3424  1440 1441 1444 1477  -HSync +Vsync
+#xrandr --addmode HDMI1 2560x1440
+#xrandr --output HDMI1 --set "Broadcast RGB" "Full"
+startprog "compton --config ~/.compton.conf -b" compton
 
 # Set and rotate wallpaper every 30min
 startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
-
-# Move files from ~/Downloads with inotify
-#startprog "$HOME/.bin/sort_downloads.sh"
 
 #startprog "devmon" devmon
 #startprog "urxvtd -q -f -o" urxvtd
@@ -54,5 +55,4 @@ startprog "xbindkeys" xbindkeys
 startprog "redshift -l 55.6050:55.6050" redshift
 startprog "syndaemon -t -k -i 1 -d" syndaemon
 startprog "unclutter -idle 3" syndaemon
-#startprog "tmux new-session -s irc -n irc -d weechat" weechat
 exec i3

@@ -10,9 +10,9 @@ Rxvt.perl-ext-common: 		default,matcher
 Rxvt.url-launcher: 			/usr/bin/chromium
 Rxvt.matcher.button: 		1
 Rxvt.colorUL: 				#4682B4
-URxvt*.transparent: true
+ URxvt*.transparent: true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt*.shading: 25
+ URxvt*.shading: 25
 
 ! Remove ISO-mode
 Rxvt.iso14755: false

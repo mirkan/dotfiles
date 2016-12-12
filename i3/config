@@ -228,5 +228,6 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 
 # Assign to workspace
 $RUN i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
-$RUN i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
+$RUN i3-msg "workspace $tag2; exec chromium --no-startup-id; workspace $tag1"
+#$RUN i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
 $RUN i3-msg "workspace $tag0; exec urxvtc -e sh -c 'journalctl -p0..6 -f' -no-startup-id; workspace $tag1"

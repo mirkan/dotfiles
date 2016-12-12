@@ -4,7 +4,7 @@ DIST=$(lsb_release -is)
 export ZSH=$HOME/.oh-my-zsh
 export BROWSER="chromium"
 #export VAGRANT_HOME="$HOME/vagrant/.vagrant.d/"
-#export PATH=sr/local/bin:$PATH
+export PATH=/usr/local/bin:/home/robin/.bin:$PATH
 export EDITOR=vim
 export LIBVIRT_DEFAULT_URI="qemu+ssh://robin@gen8/system"
 # Set theme
