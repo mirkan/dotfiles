@@ -44,7 +44,7 @@ startprog() {
 #xrandr --newmode "2560x1440"  222.52  2560 2720 2992 3424  1440 1441 1444 1477  -HSync +Vsync
 #xrandr --addmode HDMI1 2560x1440
 #xrandr --output HDMI1 --set "Broadcast RGB" "Full"
-startprog "compton --config ~/.compton.conf -b" compton
+#startprog "compton --config ~/.compton.conf -b" compton
 
 # Set and rotate wallpaper every 30min
 startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
