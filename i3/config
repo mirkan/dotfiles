@@ -3,7 +3,9 @@
 set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango: DejaVu Sans Mono 8
-font pango: URW Gothic L Book 8, FontAwesome 8
+#font pango: URW Gothic L Book 8, FontAwesome 8
+#font pango: Terminus 11
+font xft:Inconsolata-g 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod 
@@ -20,26 +22,26 @@ set $tag2 "2:www"
 set $tag3 "3:work"
 set $tag4 "4:virt"
 set $tag5 "5:media"
-set $tag6 "6:spel"
-set $tag7 "7:mail"
+#set $tag6 "6:spel"
+#set $tag7 "7:mail"
 #set $tag8 "8:log"
-set $tag5 "9:irc"
+#set $tag5 "9:irc"
 set $tag8 "0:log"
 set $RUN exec --no-startup-id
 
-workspace $tag1 output LVDS1
-workspace $tag2 output LVDS1
-workspace $tag3 output LVDS1
-workspace $tag4 output HDMI1
-workspace $tag5 output LVDS1
-workspace $tag6 output LVDS1
-workspace $tag7 output LVDS1
-workspace $tag8 output LVDS1
-workspace $tag9 output LVDS1
+#workspace $tag1 output LVDS1
+#workspace $tag2 output LVDS1
+#workspace $tag3 output LVDS1
+#workspace $tag4 output HDMI1
+#workspace $tag5 output LVDS1
+#workspace $tag6 output LVDS1
+#workspace $tag7 output LVDS1
+#workspace $tag8 output LVDS1
+#workspace $tag9 output LVDS1
 
 # KEY BINDINGS
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+#bindsym $mod+Shift+minus move scratchpad
+#bindsym $mod+minus scratchpad show
 
 # Open a terminal
 bindsym $mod+Return exec urxvt
@@ -54,7 +56,6 @@ bindsym $mod+Shift+Escape exec --no-startup-id i3lock-fancy
 
 # start dmenu/interrobang (a program launcher)
 #bindsym $mod+d exec dmenu_run -sb white -sf black
-#bindsym $mod+d exec --no-startup-id interrobang
 bindsym $mod+d exec --no-startup-id rofi -auto-select -show run
 
 # change focus
@@ -144,39 +145,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "$HOME/.bin/i3_powermenu.sh"
 
-# ASSIGN APPLICATIONS TO WORKSPACE:
-# 2.www
-#assign [class="Chromium"] 2:www
-#assign [class="Opera"] 2:www
-#assign [class="Firefox"] 2:www
-#assign [class="Dwb"] 2:www
-
-#3.MUSIK
-#assign [class="Clementine"] $tag5
-#assign [class="Spotify"] $tag5
-
-#3.WORK
-#assign [class="libreoffice"] $tag3
-
-#4.Virt
-#assign [class="VirtualBox"] 4:virt
-#assign [class="Virt-manager"] 4:virt
-
-#5.SPEL
-#assign [class="Wine" instance="Gw.exe"] 6spel
-#assign [class="Steam"] 6spel
-#assign [class="Skype"] 6spel
-
-# MAIL
-#assign [class="Thunderbird"] $tag7
-
 # PREVENT TILING WINDOWS, FLOAT:
-#for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] floating enable
 #for_window [class="Wine" instance="Gw.exe"] floating enable
 
 
 # Hide title for applications:
-#for_window [class="Dwb"] border none
 for_window [class="URxvt"] border none
 for_window [class="Firefox"] border none
 
@@ -204,10 +178,12 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+		#status_command	   		i3status
 		status_command	   		i3blocks
 		position				top
 		strip_workspace_numbers	no
 		tray_output 			primary
+		tray_padding 			1
 
 		colors {
 			separator #404040
@@ -229,5 +205,4 @@ client.urgent #c84d17 #c84d17 #ffffff #c84d17
 # Assign to workspace
 $RUN i3-msg "workspace $tag1; exec urxvtc; workspace $tag1"
 $RUN i3-msg "workspace $tag2; exec chromium --no-startup-id; workspace $tag1"
-#$RUN i3-msg "workspace $tag2; exec firefox --no-startup-id; workspace $tag1"
 $RUN i3-msg "workspace $tag0; exec urxvtc -e sh -c 'journalctl -p0..6 -f' -no-startup-id; workspace $tag1"

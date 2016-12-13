@@ -4,7 +4,8 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Syntax highlightning
-"colorscheme solarized
+colorscheme gruvbox
+
 syntax on
 set wrap
 set number
@@ -17,6 +18,7 @@ set smartcase
 set shiftwidth=4
 set tabstop=4
 
+"hi Normal ctermbg=NONE
 " Hightlighting colors
 highlight SpecialKey guifg=#545454
 highlight NonText guifg=#545454

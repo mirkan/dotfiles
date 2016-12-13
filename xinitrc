@@ -51,8 +51,10 @@ startprog "$HOME/.bin/wallpaper_rotate" $HOME/.bin/wallpaper_rotate
 
 #startprog "devmon" devmon
 #startprog "urxvtd -q -f -o" urxvtd
+startprog "env QT_QPA_PLATFORMTHEME=generic owncloud" owncloud
 startprog "xbindkeys" xbindkeys
 startprog "redshift -l 55.6050:55.6050" redshift
 startprog "syndaemon -t -k -i 1 -d" syndaemon
 startprog "unclutter -idle 3" syndaemon
 exec i3
+#exec budgie-desktop

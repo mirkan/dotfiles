@@ -1,13 +1,14 @@
 ! terminal colors -----
 
-Rxvt*scrollBar:	        false
-Rxvt*font: 		xft:Inconsolata\ for\ Powerline:size=15
+Rxvt*scrollBar:	        	false
+Rxvt*font: 					xft:Inconsolata\ for\ Powerline:size=15
 !Rxvt*depth:     	        30
 Rxvt*letterSpace:  	        -1
-Rxvt*termName: rxvt
+Rxvt*termName: 				rxvt
 Rxvt*intensityStyles:		false
 Rxvt.perl-ext-common: 		default,matcher
-Rxvt.url-launcher: 			/usr/bin/chromium Rxvt.matcher.button: 		1
+Rxvt.url-launcher: 			/usr/bin/chromium 
+Rxvt.matcher.button: 		1
 Rxvt.colorUL: 				#4682B4
 Rxvt*.transparent: true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
@@ -16,6 +17,13 @@ Rxvt*.shading: 25
 ! Remove ISO-mode
 Rxvt.iso14755: false
 Rxvt.iso14755_52: false
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
 ! COLORSCHEME
 ! Solarized
@@ -40,17 +48,6 @@ Rxvt.iso14755_52: false
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
-
-! Light
-
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
 
 ! Set colors
 !*background:              S_base03
@@ -79,36 +76,67 @@ Rxvt.iso14755_52: false
 !*color15:                 S_base3
 
 ! Gruvbox - Dark
-hard contrast: *background: #1d2021
-*background: #282828
+! colors
+*.cursorColor:  #ebdbb2
+! hard contrast: *background: #1d2021
+*.background: #282828
 ! soft contrast: *background: #32302f
-*foreground: #ebdbb2
+*.foreground: #ebdbb2
 ! Black + DarkGrey
-*color0:  #282828
-*color8:  #928374
+*.color0:  #282828
+*.color8:  #928374
 ! DarkRed + Red
-*color1:  #cc241d
-*color9:  #fb4934
+*.color1:  #cc241d
+*.color9:  #fb4934
 ! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
+*.color2:  #98971a
+*.color10: #b8bb26
 ! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
+*.color3:  #d79921
+*.color11: #fabd2f
 ! DarkBlue + Blue
-*color4:  #458588
-*color12: #83a598
+*.color4:  #458588
+*.color12: #83a598
 ! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
+*.color5:  #b16286
+*.color13: #d3869b
 ! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
+*.color6:  #689d6a
+*.color14: #8ec07c
 ! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
-
-! vim:ft=xdefaults
+*.color7:  #a89984
+*.color15: #ebdbb2
+! for 256 color stuff
+*.color24:  #076678
+*.color66:  #427b58
+*.color88:  #9d0006
+*.color96:  #8f3f71
+*.color100: #79740e
+*.color108: #8ec07c
+*.color109: #83a598
+*.color130: #af3a03
+*.color136: #b57614
+*.color142: #b8bb26
+*.color167: #fb4934
+*.color175: #d3869b
+*.color208: #fe8019
+*.color214: #fabd2f
+*.color223: #ebdbb2
+*.color228: #f4e8ba
+*.color229: #fdf4c1
+*.color230: #ffffc8
+*.color234: #1d2021
+*.color235: #282828
+*.color236: #32302f
+*.color237: #3c3836
+*.color239: #504945
+*.color241: #665c54
+*.color243: #7c6f64
+*.color244: #928374
+*.color245: #928374
+*.color246: #a89984
+*.color248: #bdae93
+*.color250: #d5c4a1
 ! Enabled modi
 rofi.modi:                           window,run,ssh,edits
 ! Window opacity
@@ -346,3 +374,4 @@ rofi.key-run:
 ! Keybinding
 rofi.key-ssh:                        
 rofi.key-edits:                        
+! vim:ft=xdefaults
