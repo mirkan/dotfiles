@@ -17,3 +17,5 @@ alias pa="pacaur"
 #alias pacimpl="/usr/bin/pacman -D --asdep"		# "mark as [impl]icit"	- mark one or more packages as non explicitly installed
 # "[r]emove [o]rphans" - recursively remove ALL orphaned packages
 #alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rs \$(/usr/bin/pacman -Qtdq | sed -e ":a;N;$!ba;s/\n/ /g")"
+#
+alias pacupl="sudo pacman -Syup | sed -rn 's|^.*/(.*)\.pkg.*$|\1|p' | sort -h"

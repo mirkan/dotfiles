@@ -10,368 +10,72 @@ Rxvt.perl-ext-common: 		default,matcher
 Rxvt.url-launcher: 			/usr/bin/chromium 
 Rxvt.matcher.button: 		1
 Rxvt.colorUL: 				#4682B4
-Rxvt*.transparent: true
+Rxvt*.transparent: 			true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-Rxvt*.shading: 25
+Rxvt*.shading: 				25
 
 ! Remove ISO-mode
-Rxvt.iso14755: false
-Rxvt.iso14755_52: false
+Rxvt.iso14755: 				false
+Rxvt.iso14755_52: 			false
 
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft.autohint: 				0
+Xft.lcdfilter:  			lcddefault
+Xft.hintstyle:  			hintfull
+Xft.hinting: 				1
+Xft.antialias: 				1
+Xft.rgba: 					rgb
 
 ! COLORSCHEME
-! Solarized
-! Common
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+! MATERIAL
 
-! Dark
-#define S_base03        #001A21
-!#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #FFFFFF
-!#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+*background 		: #263238
+*foreground 		: #eceff1
 
-! Set colors
-!*background:              S_base03
-!*foreground:              S_base0
-!*fading:                  30
-!*fadeColor:               S_base03
-!*cursorColor:             S_base1
-!*pointerColorBackground:  S_base01
-!*pointerColorForeground:  S_base1
+! black
+*color0  			: #263238
+*color8  			: #37474f
+! red
+*color1  			: #ff9800
+*color9  			: #ffa74d
+! green
+*color2  			: #8bc34a
+*color10 			: #9ccc65
+! yellow
+*color3  			: #ffc107
+*color11 			: #ffa000
+! blue
+*color4  			: #03a9f4
+*color12 			: #81d4fa
+! magenta
+*color5  			: #e91e63
+*color13 			: #ad1457
+! cyan
+*color6  			: #009688
+*color14 			: #26a69a
+! white
+*color7  			: #cfd8dc
+*color15 			: #eceff1
+! http://www.xcolors.net/dl/material
 
-!*color0:                  S_base02
-!*color1:                  S_red
-!*color2:                  S_green
-!*color3:                  S_yellow
-!*color4:                  S_blue
-!*color5:                  S_magenta
-!*color6:                  S_cyan
-!*color7:                  S_base2
-!*color9:                  S_orange
-!*color8:                  S_base03
-!*color10:                 S_base01
-!*color11:                 S_base00
-!*color12:                 S_base0
-!*color13:                 S_violet
-!*color14:                 S_base1
-!*color15:                 S_base3
-
-! Gruvbox - Dark
-! colors
-*.cursorColor:  #ebdbb2
-! hard contrast: *background: #1d2021
-*.background: #282828
-! soft contrast: *background: #32302f
-*.foreground: #ebdbb2
-! Black + DarkGrey
-*.color0:  #282828
-*.color8:  #928374
-! DarkRed + Red
-*.color1:  #cc241d
-*.color9:  #fb4934
-! DarkGreen + Green
-*.color2:  #98971a
-*.color10: #b8bb26
-! DarkYellow + Yellow
-*.color3:  #d79921
-*.color11: #fabd2f
-! DarkBlue + Blue
-*.color4:  #458588
-*.color12: #83a598
-! DarkMagenta + Magenta
-*.color5:  #b16286
-*.color13: #d3869b
-! DarkCyan + Cyan
-*.color6:  #689d6a
-*.color14: #8ec07c
-! LightGrey + White
-*.color7:  #a89984
-*.color15: #ebdbb2
-! for 256 color stuff
-*.color24:  #076678
-*.color66:  #427b58
-*.color88:  #9d0006
-*.color96:  #8f3f71
-*.color100: #79740e
-*.color108: #8ec07c
-*.color109: #83a598
-*.color130: #af3a03
-*.color136: #b57614
-*.color142: #b8bb26
-*.color167: #fb4934
-*.color175: #d3869b
-*.color208: #fe8019
-*.color214: #fabd2f
-*.color223: #ebdbb2
-*.color228: #f4e8ba
-*.color229: #fdf4c1
-*.color230: #ffffc8
-*.color234: #1d2021
-*.color235: #282828
-*.color236: #32302f
-*.color237: #3c3836
-*.color239: #504945
-*.color241: #665c54
-*.color243: #7c6f64
-*.color244: #928374
-*.color245: #928374
-*.color246: #a89984
-*.color248: #bdae93
-*.color250: #d5c4a1
-! Enabled modi
-rofi.modi:                           window,run,ssh,edits
-! Window opacity
-rofi.opacity:                        80
-! Window width
-rofi.width:                          50
-! Number of lines
-rofi.lines:                          10
-! Number of columns
-rofi.columns:                        1
-! Font to use
-rofi.font:                           mono 12
-! Foreground color
-rofi.fg:                             #FFFFFF
-! Background color
-rofi.bg:                             #001A21
-! Foreground color for active row
-rofi.fg-active:                      #268BD2
-! Foreground color for urgent row
-rofi.fg-urgent:                      #DC322F
-! Foreground color for highlighted active row
-rofi.hlfg-active:                    #FDF6E3
-! Foreground color for highlighted urgent row
-rofi.hlfg-urgent:                    #FDF6E3
-! Background color for active row
-rofi.bg-active:                      #FDF6E3
-! Background color for urgent row
-rofi.bg-urgent:                      #FDF6E3
-! Background color for highlighted active row
-rofi.hlbg-active:                    #268BD2
-! Background color for highlighted urgent row
-rofi.hlbg-urgent:                    #DC322F
-! Background color for alternating row
-rofi.bgalt:                          #001A21
-! Foreground color for highlighted row
-rofi.hlfg:                           #EEE8D5
-! Background color for highlighted row
-rofi.hlbg:                           #586E75
-! Border color
-rofi.bc:                             #002B36
-! Use extended color scheme
-rofi.color-enabled:                  false
-! Color scheme for normal row
-rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
-! Color scheme for urgent row
-rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
-! Color scheme for active row
-rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
-! Color scheme window
-rofi.color-window:                   #fdf6e3,#002b36
-! Border width
-rofi.bw:                             1
-! Location on screen
-rofi.location:                       0
-! Padding
-rofi.padding:                        5
-! Y-offset relative to location
-rofi.yoffset:                        0
-! X-offset relative to location
-rofi.xoffset:                        0
-! Always show number of lines
-rofi.fixed-num-lines:                false
-! Terminal to use
-rofi.terminal:                       rofi-sensible-terminal
-! Ssh client to use
-rofi.ssh-client:                     ssh
-! Ssh command to execute
-rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
-! Run command to execute
-rofi.run-command:                    {cmd}
-! Command to get extra run targets
-rofi.run-list-command:               
-! Run command to execute that runs in shell
-rofi.run-shell-command:              {terminal} -e {cmd}
-! Disable history in run/ssh
-rofi.disable-history:                false
-! Use levenshtein sorting
-rofi.levenshtein-sort:               false
-! Set case-sensitivity
-rofi.case-sensitive:                 false
-! Enable sidebar-mode
-rofi.sidebar-mode:                   false
-! Set lazy filter limit
-rofi.lazy-filter-limit:              15000
-! Row height (in chars)
-rofi.eh:                             1
-! Enable auto select mode
-rofi.auto-select:                    false
-! Parse hosts file for ssh mode
-rofi.parse-hosts:                    false
-! Parse known_hosts file for ssh mode
-rofi.parse-known-hosts:              true
-! Set the modi to combine in combi mode
-rofi.combi-modi:                     window,run
-! Do a more fuzzy matching
-rofi.fuzzy:                          false
-! Use glob matching
-rofi.glob:                           false
-! Use regex matching
-rofi.regex:                          false
-! Tokenize input string
-rofi.tokenize:                       true
-! Monitor id to show on
-rofi.m:                              -1
-! Margin between rows
-rofi.line-margin:                    2
-! Pre-set filter
-rofi.filter:                         
-! Separator style (none, dash, solid)
-rofi.separator-style:                dash
-! Hide scroll-bar
-rofi.hide-scrollbar:                 false
-! Show markup
-rofi.markup-rows:                    false
-! Fullscreen
-rofi.fullscreen:                     false
-! Fake transparency
-rofi.fake-transparency:              false
-! DPI
-rofi.dpi:                            -1
-! Threads to use for string matching
-rofi.threads:                        1
-! Scrollbar width
-rofi.scrollbar-width:                8
-! Pidfile location
-rofi.pid:                            /run/user/1000/rofi.pid
-! Keybinding
-rofi.kb-primary-paste:               Control+Shift+v,Shift+Insert
-! Keybinding
-rofi.kb-secondary-paste:             Control+v,Insert
-! Keybinding
-rofi.kb-clear-line:                  Control+u
-! Keybinding
-rofi.kb-move-front:                  Control+a
-! Keybinding
-rofi.kb-move-end:                    Control+e
-! Keybinding
-rofi.kb-move-word-back:              Alt+b
-! Keybinding
-rofi.kb-move-word-forward:           Alt+f
-! Keybinding
-rofi.kb-move-char-back:              Left,Control+b
-! Keybinding
-rofi.kb-move-char-forward:           Right,Control+f
-! Keybinding
-rofi.kb-remove-word-back:            Control+Alt+h
-! Keybinding
-rofi.kb-remove-word-forward:         Control+Alt+d
-! Keybinding
-rofi.kb-remove-char-forward:         Delete,Control+d
-! Keybinding
-rofi.kb-remove-char-back:            BackSpace,Control+h
-! Keybinding
-rofi.kb-accept-entry:                Control+j,Control+m,Return,KP_Enter
-! Keybinding
-rofi.kb-accept-custom:               Control+Return
-! Keybinding
-rofi.kb-accept-entry-continue:       Shift+Return
-! Keybinding
-rofi.kb-mode-next:                   Shift+Right,Control+Tab
-! Keybinding
-rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab
-! Keybinding
-rofi.kb-toggle-case-sensitivity:     grave,dead_grave
-! Keybinding
-rofi.kb-delete-entry:                Shift+Delete
-! Keybinding
-rofi.kb-row-left:                    Control+Page_Up
-! Keybinding
-rofi.kb-row-right:                   Control+Page_Down
-! Keybinding
-rofi.kb-row-up:                      Up,Control+p,Shift+Tab
-! Keybinding
-rofi.kb-row-down:                    Down,Control+n
-! Keybinding
-rofi.kb-row-tab:                     Tab
-! Keybinding
-rofi.kb-page-prev:                   Page_Up
-! Keybinding
-rofi.kb-page-next:                   Page_Down
-! Keybinding
-rofi.kb-row-first:                   Home,KP_Home
-! Keybinding
-rofi.kb-row-last:                    End,KP_End
-! Keybinding
-rofi.kb-row-select:                  Control+space
-! Keybinding
-rofi.kb-cancel:                      Escape,Control+bracketleft
-! Keybinding
-rofi.kb-custom-1:                    Alt+1
-! Keybinding
-rofi.kb-custom-2:                    Alt+2
-! Keybinding
-rofi.kb-custom-3:                    Alt+3
-! Keybinding
-rofi.kb-custom-4:                    Alt+4
-! Keybinding
-rofi.kb-custom-5:                    Alt+5
-! Keybinding
-rofi.kb-custom-6:                    Alt+6
-! Keybinding
-rofi.kb-custom-7:                    Alt+7
-! Keybinding
-rofi.kb-custom-8:                    Alt+8
-! Keybinding
-rofi.kb-custom-9:                    Alt+9
-! Keybinding
-rofi.kb-custom-10:                   Alt+0
-! Keybinding
-rofi.kb-custom-11:                   Alt+Shift+1
-! Keybinding
-rofi.kb-custom-12:                   Alt+Shift+2
-! Keybinding
-rofi.kb-custom-13:                   Alt+Shift+3
-! Keybinding
-rofi.kb-custom-14:                   Alt+Shift+4
-! Keybinding
-rofi.kb-custom-15:                   Alt+Shift+5
-! Keybinding
-rofi.kb-custom-16:                   Alt+Shift+6
-! Keybinding
-rofi.kb-custom-18:                   Alt+Shift+8
-! Keybinding
-rofi.kb-custom-17:                   Alt+Shift+7
-! Keybinding
-rofi.kb-custom-19:                   Alt+Shift+9
-! Keybinding
-rofi.kb-screenshot:                  Alt+Shift+S
-! Keybinding
-rofi.kb-toggle-sort:                 Alt+grave
-! Keybinding
-rofi.key-window:                     
-! Keybinding
-rofi.key-run:                        
-! Keybinding
-rofi.key-ssh:                        
-rofi.key-edits:                        
-! vim:ft=xdefaults
+! ROFI
+rofi.color-enabled: 		true
+rofi.color-window:			#222222, #222222, #268bd2
+rofi.color-normal:		   	#222222, #ffffff, #222222, #268bd2, #ffffff
+rofi.color-active:		   	#222222, #268bd2, #222222, #268bd2, #205171
+rofi.color-urgent: 			#222222, #f3843d, #222222, #268bd2, #ffc39c
+rofi.font:                  Inconsolata 15
+rofi.modi:                  window,run,ssh,edits
+rofi.width:                 30
+!rofi.lines:                 10
+rofi.columns:               2
+rofi.location:              1
+!rofi.padding:               5
+rofi.yoffset:               24
+rofi.xoffset:               4
+rofi.hide-scrollbar:        true
+rofi.sidebar-mode:          true
+!rofi.auto-select:           true
+rofi.line-margin:           1
+rofi.separator-style:       none
+rofi.markup-rows:           true
+!! vim:ft=xdefaults
