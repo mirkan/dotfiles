@@ -6,7 +6,7 @@
 xset -b
 setxkbmap se -option terminate:ctrl_alt_bksp
 # Disable Caps lock
-setxkbmap -option caps:none
+#setxkbmap -option caps:none
 
 # Error logpath for i3
 #E_i3=$HOME/.i3log-$(date +'%F-%k-%M-%S')

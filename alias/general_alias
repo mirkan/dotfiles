@@ -25,6 +25,7 @@ alias du1="du --max-depth=1"
 alias hist="history | grep"         		# requires an argument
 alias openports="ss --all --numeric --processes --ipv4 --ipv6"
 alias ..="cd .."
+#alias mount="mount | column -t"
 
 ## Privileged access
 if [ $UID -ne 0 ]; then
@@ -115,14 +116,21 @@ cl() {
 #}
 # SSH
 alias sshgen="ssh-keygen -t rsa -C $1"
+
 # Start all modules required for VirtualBox
 alias modvbox="sudo modprobe vboxdrv;sudo modprobe vboxnetadp;sudo modprobe vboxnetflt;sudo modprobe vboxpci"
 
+# Network
 alias wakebrix="wol 74:d4:35:69:d2:fe"
-alias python="/usr/bin/python2"
-alias showcolors="$HOME/.scripts/print_colorscheme.sh"
 alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 alias vpn_bahnhof="sudo vpnc-disconnect; sudo vpnc"
 alias vpnd_bahnhof="sudo vpnc-disconnect"
-alias fixscreens="xrandr --output HDMI1 --left-of LVDS1 --auto; ~/.bin/wallpaper_rotate"
+alias getmyip="curl icanhazip.com"
+
+# Display
+alias showcolors="$HOME/.scripts/print_colorscheme.sh"
+alias fixscreens="xrandr --auto; xrandr --output HDMI1 --primary; xrandr --output LVDS1 --left-of HDMI1 ; wallpaper_rotate"
+
+# Misc
+alias python="/usr/bin/python2"
 #vim: set syntax=sh

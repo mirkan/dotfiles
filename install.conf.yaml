@@ -10,7 +10,6 @@
     ~/.i3:
         force: true
         path: i3/
-    ~/.i3blocks.conf: i3blocks.conf
     ~/.compton.conf: compton.conf
     ~/.config/dunst/dunstrc: dunst/
     ~/.config/ranger: ranger/

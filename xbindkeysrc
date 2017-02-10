@@ -8,16 +8,16 @@
 ### SOUND ###
 # pulse
 # Increase volume
-#"pactl set-sink-volume 0 +5%"
-"pamixer --increase 5"
+#"pamixer --increase 5"
+"ponymix --max-volume 100 increase 5"
   XF86AudioRaiseVolume
 # Decrease volume
-#"pactl set-sink-volume 0 -5%"
-"pamixer --decrease 5"
+#"pamixer --decrease 5"
+"ponymix --max-volume 100 decrease 5"
   XF86AudioLowerVolume
 # Mute volume
-#"pactl set-sink-mute 0 toggle"
-"pamixer -t"
+#"pamixer -t"
+"ponymix toggle"
   XF86AudioMute
 
 #ALSA
@@ -45,10 +45,10 @@
 
 # SCREENSHOT
 # Take screenshot at selected window or area and save to ~/.screenshots
-"~/.bin/screenshot select"
+"~/.bin/desktop/screenshot select"
   control+Print
 # Take full screenshot of display and save to ~/.screenshots
-"~/.bin/screenshot"
+"~/.bin/desktop/screenshot"
   Print
 # BRIGHTNESS
 # Better brightness adjustment	

@@ -9,14 +9,10 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[mpd]
-command=mpc current
-interval=5
-
 # Memory usage
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=mem
+label=
 separator=true
 interval=30
 
@@ -33,12 +29,14 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 #instance=wlan0
+label=
 color=#00FF00
 interval=10
 separator=false
 
 [wifi]
 instance=wlp3s0
+label=
 interval=10
 separator=true
 
@@ -60,18 +58,29 @@ separator=true
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
+
 [volume]
+instance=130/5
 label=
-command=pamixer '--get-volume'
+command=~/.i3/i3blocks/blocks/volume-pulse
+interval=once
+
+[brightness]
+label=
+command=~/.i3/i3blocks/blocks/brightness
 interval=5
-signal=10
 
 # Battery indicator
 # The battery instance defaults to 0.
+#[battery]
+#label=⚡
+#instance=0
+#interval=30
 [battery]
-label=⚡
-instance=1
-interval=30
+label=
+command=~/.i3/i3blocks/blocks/battery
+instance=0
+interval=5
 
 # Date Time
 [time]
@@ -90,7 +99,7 @@ interval=5
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-#[openvpn]
+##[openvpn]
 #interval=20
 
 # Temperature
