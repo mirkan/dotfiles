@@ -7,13 +7,13 @@
         force: true
         path: vimrc
     ~/.gitconfig: gitconfig
-    ~/.i3:
-        force: true
-        path: i3/
-    ~/.compton.conf: compton.conf
-    ~/.config/dunst/dunstrc: dunst/
-    ~/.config/ranger: ranger/
-    ~/.zlogin: zlogin
+    # ~/.i3:
+    #     force: true
+    #     path: i3/
+    # ~/.compton.conf: compton.conf
+    # ~/.config/dunst/dunstrc: dunst/
+    # ~/.config/ranger: ranger/
+    # ~/.zlogin: zlogin
     ~/.zshrc:
         force: true
         path: zshrc
@@ -25,10 +25,10 @@
         path: bashrc
     ~/.alias: alias/
     ~/.Xresources: Xresources
-    ~/.xbindkeysrc: xbindkeysrc
-    ~/.xinitrc:
-        force: true
-        path: xinitrc
+    #~/.xbindkeysrc: xbindkeysrc
+    #~/.xinitrc:
+    #    force: true
+    #    path: xinitrc
     ~/.local/share/fonts:
         path: fonts/
         create: yes
