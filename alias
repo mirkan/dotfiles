@@ -5,11 +5,9 @@
 ## Edit configs
 alias se="sudoedit"
 alias evim="$EDITOR ~/.vimrc"
-alias ei3="$EDITOR ~/.i3/config"
 alias ealias="$EDITOR ~/.alias"
 alias ezsh="$EDITOR ~/.zshrc"
 alias ebash="$EDITOR ~/.bashrc"
-alias exinit="$EDITOR ~/.xinitrc"
 
 ## Modified commands
 alias ls="ls --color=auto -1"
@@ -18,14 +16,12 @@ alias df="df -h"
 alias du="du -c -h"
 alias mkdir="mkdir -p -v"
 alias dmesg="dmesg -HL"
-alias less=$PAGER
 
 alias da="date '+%A, %B %d, %Y [%T]'"
 alias du1="du --max-depth=1"
 alias hist="history | grep"         		# requires an argument
 alias openports="ss --all --numeric --processes --ipv4 --ipv6"
 alias ..="cd .."
-#alias mount="mount | column -t"
 
 ## Privileged access
 if [ $UID -ne 0 ]; then
@@ -35,8 +31,6 @@ if [ $UID -ne 0 ]; then
     alias root="sudo -s"
     alias reboot="sudo systemctl reboot"
     alias poweroff="sudo systemctl poweroff"
-    alias update="sudo pacman -Su"
-    alias netctl="sudo netctl"
 fi
 
 ## ps
@@ -100,37 +94,12 @@ cl() {
         echo "bash: cl: "$1": Directory not found"
     fi
 }
-# Vagrant
-#alias vagup="vagrant up"
-#alias vagssh="vagrant ssh"
-#alias vagoff="vagrant halt -f"
-#alias vagsup="vagrant up; vagrant ssh"
-#alias vagalloff="command $HOME/.bin/vagrant_shutdown.sh"
-#alias vagrel="vagrant halt -f; vagrant up"
-#vagrant() {
-#    if [[ $@ == "global-halt" ]]; then
-#        command ./.bin/vagrant_shutdown.sh
-#    else
-#        command vagrant "$@"
-#    fi
-#}
-# SSH
-alias sshgen="ssh-keygen -t rsa -C $1"
-
-# Start all modules required for VirtualBox
-alias modvbox="sudo modprobe vboxdrv;sudo modprobe vboxnetadp;sudo modprobe vboxnetflt;sudo modprobe vboxpci"
 
 # Network
-alias wakebrix="wol 74:d4:35:69:d2:fe"
 alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
-alias vpn_bahnhof="sudo vpnc-disconnect; sudo vpnc"
-alias vpnd_bahnhof="sudo vpnc-disconnect"
 alias getmyip="curl icanhazip.com"
 
-# Display
-alias showcolors="$HOME/.scripts/print_colorscheme.sh"
-alias fixscreens="xrandr --auto; xrandr --output HDMI1 --primary; xrandr --output LVDS1 --left-of HDMI1 ; wallpaper_rotate"
-
-# Misc
-alias python="/usr/bin/python2"
-#vim: set syntax=sh
+# Aliases for Ubuntu
+alias install="sudo apt install"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"

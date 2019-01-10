@@ -11,13 +11,13 @@ export SYSTEMD_EDITOR=vim
 export VISUAL=vim
 export HISTFILESIZE=
 export HISTSIZE=
-export PAGER='vimpager'
+#export PAGER='vimpager'
 
 #If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Include aliases and exports
-[[ -f $HOME/.alias/general_alias ]] && "source $HOME/.alias/general_alias"
+[[ -f $HOME/.alias ]] && "source $HOME/.alias"
 [[ -f $HOME/.bash_exports ]] && "source $HOME/.bash_exports"
 
 # Autojump
