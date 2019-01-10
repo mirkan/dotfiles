@@ -10,3 +10,5 @@
 *.orig
 *.old
 
+# vim plugins (downloads from neobundle)
+vim/bundle/*

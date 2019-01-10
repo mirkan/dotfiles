@@ -1,23 +1,19 @@
 #!/bin/zsh
-DIST=$(lsb_release -is)
-
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 export BROWSER="firefox"
 export PATH=/usr/local/bin:/home/robin/.bin:$PATH
 export EDITOR=vim
+source $HOME/.alias
 
-# Set theme
-ZSH_THEME="agnoster"
-
-# Source
-
-# Ubuntu
-source $HOME/.alias/ubuntu_alias
-plugins=(web-search systemd python git ubuntu)
-
-[[ -f "$HOME/.alias/general_alias" ]] && source "$HOME/.alias/general_alias"
 [[ -f /usr/lib/z.sh ]] && source "/usr/lib/z.sh"
+[[ -f "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# oh-my-zsh 
+# Set theme
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="agnoster"
+plugins=(web-search systemd python git ubuntu)
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
