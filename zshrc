@@ -13,7 +13,7 @@ source $HOME/.alias
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
-plugins=(web-search systemd python git ubuntu)
+plugins=(tmux web-search systemd python git ubuntu)
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.

@@ -5,6 +5,12 @@
         force: true
         path: vimrc
     ~/.gitconfig: gitconfig
+    ~/.tmux.conf: 
+        force: true
+        path: tmux.conf
+    ~/.tmux.conf.local: 
+        force: true
+        path: tmux.conf.local 
     ~/.zshrc:
         force: true
         path: zshrc
