@@ -4,7 +4,10 @@ export BROWSER="firefox"
 export PATH=/usr/local/bin:/home/robin/.bin:$PATH
 export EDITOR=vim
 source $HOME/.alias
+source <(kubectl completion zsh)
+source ~/.kubectl_fzf.plugin.zsh
 
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 [[ -f /usr/lib/z.sh ]] && source "/usr/lib/z.sh"
 [[ -f "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
@@ -13,7 +16,7 @@ source $HOME/.alias
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
-plugins=(tmux web-search systemd python git ubuntu)
+plugins=(tmux web-search systemd python git ubuntu kubectl)
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
