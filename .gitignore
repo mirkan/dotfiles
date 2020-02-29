@@ -11,4 +11,5 @@
 *.old
 
 # vim plugins (downloads from neobundle)
+vim/.netrwhist
 vim/bundle/*
